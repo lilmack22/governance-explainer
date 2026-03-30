@@ -30,7 +30,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mechanism/30 bg-mechanism/5 text-mechanism text-xs font-medium tracking-widest uppercase mb-10"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-mechanism animate-pulse" />
-          Political Economy of Development
+          Introduction
         </motion.div>
 
         {/* Parable opener */}
