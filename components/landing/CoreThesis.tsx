@@ -123,7 +123,7 @@ export default function CoreThesis() {
               {
                 concept: "Institutional analysis",
                 body: "Rules, formal and informal, shape what is possible. Institutions determine whether a capable person in a broken system can succeed — and whether change outlasts individuals.",
-                color: "#d4a843",
+                color: "#38bdf8",
               },
               {
                 concept: "Power and settlement analysis",

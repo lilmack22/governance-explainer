@@ -22,7 +22,7 @@ const cases = [
     question: "How did Botswana avoid the resource curse when so many others didn't?",
     concepts: ["Institutions", "Resource Governance", "Elite Cohesion"],
     status: "coming-soon" as const,
-    accent: "#d4a843",
+    accent: "#38bdf8",
   },
   {
     slug: "liberia",

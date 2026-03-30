@@ -21,7 +21,7 @@
 
   /* Concept node colors */
   --color-upstream: #8b5cf6;
-  --color-mechanism: #d4a843;
+  --color-mechanism: #38bdf8;
   --color-outcome: #34d399;
   --color-critique: #f59e0b;
 
@@ -83,4 +83,26 @@ h1, h2, h3, h4 {
 /* React Flow overrides */
 .react-flow__background { background: transparent !important; }
 .react-flow__edge-path { stroke-width: 2; }
+
+/* Simple utility mappings for theme tokens (used across components) */
+.text-gold { color: var(--color-gold) !important; }
+.text-mechanism { color: var(--color-gold) !important; }
+.text-upstream { color: var(--color-upstream) !important; }
+.text-outcome { color: var(--color-outcome) !important; }
+.text-critique { color: var(--color-critique) !important; }
+
+.bg-gold { background-color: var(--color-gold) !important; }
+.bg-mechanism { background-color: var(--color-mechanism) !important; }
+
+.border-gold { border-color: var(--color-gold) !important; }
+.border-mechanism { border-color: var(--color-mechanism) !important; }
+
+/* Support for variable opacity forms like text-mechanism/30 via attribute selector */
+[class*="text-mechanism/"] { color: var(--color-gold) !important; }
+[class*="bg-mechanism/"] { background-color: var(--color-mechanism) !important; }
+[class*="border-mechanism/"] { border-color: var(--color-mechanism) !important; }
+
+[class*="text-gold/"] { color: var(--color-gold) !important; }
+[class*="bg-gold/"] { background-color: var(--color-gold) !important; }
+[class*="border-gold/"] { border-color: var(--color-gold) !important; }
 

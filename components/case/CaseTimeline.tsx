@@ -6,7 +6,7 @@ import type { TimelineEvent } from "@/data/types";
 
 const typeConfig: Record<TimelineEvent["type"], { color: string; bg: string; dot: string }> = {
   crisis:     { color: "#ef4444", bg: "rgba(239,68,68,0.08)",   dot: "bg-red-500" },
-  transition: { color: "#d4a843", bg: "rgba(56,189,248,0.08)", dot: "bg-sky-400" },
+  transition: { color: "#38bdf8", bg: "rgba(56,189,248,0.08)", dot: "bg-sky-400" },
   reform:     { color: "#8b5cf6", bg: "rgba(139,92,246,0.08)", dot: "bg-violet-500" },
   outcome:    { color: "#34d399", bg: "rgba(52,211,153,0.08)", dot: "bg-emerald-400" },
   tension:    { color: "#f59e0b", bg: "rgba(245,158,11,0.08)", dot: "bg-amber-500" },
