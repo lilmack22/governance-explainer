@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="text-text-muted text-base italic mb-6 tracking-wide"
         >
-          There is an old public health parable.
+          There is an old public health parable where...
         </motion.p>
 
         {/* Parable body */}
