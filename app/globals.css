@@ -91,6 +91,7 @@ h1, h2, h3, h4 {
 
 /* Utility class mappings for theme tokens */
 .text-gold      { color: var(--color-accent) !important; }
+.text-accent    { color: var(--color-accent) !important; }
 .text-mechanism { color: var(--color-accent) !important; }
 .text-upstream  { color: var(--color-upstream) !important; }
 .text-outcome   { color: var(--color-outcome) !important; }

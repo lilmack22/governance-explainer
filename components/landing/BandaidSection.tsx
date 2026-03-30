@@ -92,14 +92,14 @@ export default function BandaidSection() {
               className="grid grid-cols-2 gap-2"
             >
               {/* Symptom */}
-              <div className="rounded-lg p-4 bg-surface border border-border/40 flex items-start gap-3">
-                <span className="text-text-muted text-lg mt-0.5 shrink-0">→</span>
+              <div className="rounded-lg p-4 bg-surface border border-border/40 flex items-center gap-3">
+                <span className="text-text-muted text-lg shrink-0">→</span>
                 <p className="text-sm text-text-secondary leading-snug">{row.symptom}</p>
               </div>
               {/* Root cause */}
-              <div className="rounded-lg p-4 bg-mechanism/5 border border-mechanism/20 flex items-start gap-3">
-                <span className="text-mechanism text-lg mt-0.5 shrink-0">↑</span>
-                <p className="text-sm text-text-secondary leading-snug italic">{row.cause}</p>
+              <div className="rounded-lg p-4 bg-surface border border-border/50 flex items-start gap-3">
+                <span className="text-accent text-lg mt-0.5 shrink-0">↑</span>
+                <p className="text-sm text-text-primary leading-snug">{row.cause}</p>
               </div>
             </motion.div>
           ))}
