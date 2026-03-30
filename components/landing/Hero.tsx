@@ -65,31 +65,36 @@ export default function Hero() {
           <span className="text-mechanism not-italic font-medium">"I'm going to find out who is pushing people into the river."</span>
         </motion.div>
 
-        {/* Narrative pause */}
+        {/* Scroll transition */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.05, duration: 0.8 }}
-          className="flex items-center justify-center gap-3 my-10"
+          initial={{ opacity: 0, scaleY: 0 }}
+          animate={{ opacity: 1, scaleY: 1 }}
+          transition={{ delay: 1.0, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col items-center justify-center my-10 origin-top"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-text-muted/40" />
-          <span className="w-1.5 h-1.5 rounded-full bg-text-muted/40" />
-          <span className="w-1.5 h-1.5 rounded-full bg-text-muted/40" />
+          <div className="w-px h-10 bg-gradient-to-b from-border/60 to-transparent" />
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut", delay: 1.2 }}
+            className="text-text-muted/50 text-xs mt-1 select-none"
+          >
+            ↓
+          </motion.div>
         </motion.div>
 
         {/* The turn */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="space-y-4 mb-14"
+          transition={{ duration: 0.7, delay: 1.15, ease: [0.22, 1, 0.36, 1] }}
+          className="space-y-5 mb-14"
         >
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="font-serif text-2xl md:text-3xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
             Most of what we call "development" happens at the riverbank.
             We filter water at the cup. We deliver vaccines. We build
             clinics. We give loans. These things matter — they save lives.
           </p>
-          <p className="text-text-primary text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="font-serif text-2xl md:text-3xl text-text-primary font-semibold leading-relaxed max-w-2xl mx-auto">
             But they do not change who is upstream, or why they keep pushing.
           </p>
         </motion.div>
