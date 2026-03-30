@@ -97,7 +97,7 @@ export default function InterventionLadder() {
             A Taxonomy of Intervention
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-5">
-            All of this is good work.
+            Much of this is good work.
             <br />
             <span className="italic text-text-secondary">None of it is upstream.</span>
           </h2>
@@ -106,7 +106,7 @@ export default function InterventionLadder() {
           <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
             From water filters to NGO clinics, the development sector has built
             an extraordinary range of interventions. They can be lifesaving.
-            But they share a common feature: they operate at the level where problems
+            But all too often, they intervene at the level where problems
             are <em>experienced</em>, not where they are <em>generated</em>.
           </p>
         </ScrollReveal>

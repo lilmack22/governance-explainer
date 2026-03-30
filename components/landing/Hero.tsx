@@ -108,7 +108,7 @@ export default function Hero() {
         >
           When we keep going upstream, we see that
           <br />
-          <span className="italic text-mechanism">have political roots.</span>
+          <span className="italic text-mechanism">most development problems have political roots.</span>
         </motion.h1>
 
         <motion.p
