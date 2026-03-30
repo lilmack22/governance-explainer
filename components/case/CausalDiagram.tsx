@@ -61,7 +61,7 @@ export default function CausalDiagram({
           ? "#f59e0b"
           : sourceNode
           ? nodeTypeConfig[sourceNode.nodeType].color
-          : "#38bdf8";
+          : "#d4a843";
 
         return {
           id: e.id,

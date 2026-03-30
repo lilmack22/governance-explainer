@@ -64,7 +64,7 @@ export default function CountryMap({ coordinates, country }: Props) {
                     geography={geo}
                     style={{
                       default: {
-                        fill: isRwanda ? "#d4a843" : "#132035",
+                        fill: isRwanda ? "#38bdf8" : "#132035",
                         stroke: "#0d1e35",
                         strokeWidth: isRwanda ? 1.5 : 0.8,
                         filter: isRwanda
@@ -93,12 +93,12 @@ export default function CountryMap({ coordinates, country }: Props) {
               animate={{ r: 5 }}
               transition={{ delay: 0.8, duration: 0.4 }}
               fill="#fff"
-              stroke="#d4a843"
+              stroke="#38bdf8"
               strokeWidth={2}
             />
             <motion.circle
               fill="none"
-              stroke="#d4a843"
+              stroke="#38bdf8"
               strokeWidth={1}
               animate={{ r: [8, 20], opacity: [0.5, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
@@ -120,7 +120,7 @@ export default function CountryMap({ coordinates, country }: Props) {
       {/* Legend */}
       <div className="absolute bottom-3 left-3 flex items-center gap-3">
         <div className="flex items-center gap-1.5">
-          <div className="w-3 h-3 rounded-sm bg-gold opacity-90" />
+          <div className="w-3 h-3 rounded-sm bg-mechanism opacity-90" />
           <span className="text-[10px] text-text-muted">{country}</span>
         </div>
         <div className="flex items-center gap-1.5">

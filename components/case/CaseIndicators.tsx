@@ -20,7 +20,7 @@ export default function CaseIndicators({ indicators }: Props) {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-xl border border-border/50 bg-surface p-5 hover:border-gold/30 transition-all group"
+          className="rounded-xl border border-border/50 bg-surface p-5 hover:border-mechanism/30 transition-all group"
         >
           <p className="text-[11px] font-medium text-text-muted tracking-wide uppercase mb-4">
             {ind.name}
@@ -41,7 +41,7 @@ export default function CaseIndicators({ indicators }: Props) {
               <motion.span
                 animate={{ x: [0, 4, 0] }}
                 transition={{ repeat: Infinity, duration: 2, delay: i * 0.2 }}
-                className="text-gold text-sm"
+                className="text-mechanism text-sm"
               >
                 {ind.trend === "up" ? "↑" : "↓"}
               </motion.span>

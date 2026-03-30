@@ -68,7 +68,7 @@ const levels = [
   {
     number: "05",
     label: "What's actually upstream",
-    color: "#d4a843",
+    color: "#38bdf8",
     dimColor: "rgba(212,168,67,0.07)",
     border: "rgba(212,168,67,0.40)",
     description: "The political and institutional conditions that determine whether anything else works — or lasts.",
@@ -153,7 +153,7 @@ export default function InterventionLadder() {
                       )}
                     </div>
                     {isUpstream && !isOpen && (
-                      <span className="text-[10px] font-medium tracking-widest uppercase px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/25 shrink-0">
+                      <span className="text-[10px] font-medium tracking-widest uppercase px-2 py-0.5 rounded-full bg-mechanism/10 text-mechanism border border-mechanism/25 shrink-0">
                         The missing layer
                       </span>
                     )}

@@ -47,7 +47,7 @@ export default function SustainabilitySection() {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-5 leading-tight">
             The central question is not only
             <br />
-            <span className="italic text-gold">whether it works.</span>
+            <span className="italic text-mechanism">whether it works.</span>
           </h2>
         </ScrollReveal>
 
@@ -74,8 +74,8 @@ export default function SustainabilitySection() {
                   Short-run relief / delivery
                 </p>
               </div>
-              <div className="px-5 py-3 bg-gold/5 border-b border-gold/20">
-                <p className="text-[10px] font-medium tracking-widest uppercase text-gold/70">
+              <div className="px-5 py-3 bg-mechanism/5 border-b border-mechanism/20">
+                <p className="text-[10px] font-medium tracking-widest uppercase text-mechanism/70">
                   Long-run self-sustaining systems
                 </p>
               </div>
@@ -92,8 +92,8 @@ export default function SustainabilitySection() {
                   <span className="text-text-muted text-lg shrink-0">◦</span>
                   <p className="text-sm text-text-secondary">{row.left}</p>
                 </div>
-                <div className="px-5 py-4 bg-gold/3 flex items-center gap-3">
-                  <span className="text-gold text-lg shrink-0">✦</span>
+                <div className="px-5 py-4 bg-mechanism/3 flex items-center gap-3">
+                  <span className="text-mechanism text-lg shrink-0">✦</span>
                   <p className="text-sm text-text-primary">{row.right}</p>
                 </div>
               </motion.div>

@@ -45,7 +45,7 @@ export default function CasesPage() {
     <div className="min-h-screen pt-24 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="mb-16">
-          <span className="text-xs font-medium text-gold tracking-widest uppercase block mb-3">
+          <span className="text-xs font-medium text-mechanism tracking-widest uppercase block mb-3">
             Case Explorer
           </span>
           <h1 className="font-serif text-5xl font-bold text-text-primary mb-4">
@@ -64,7 +64,7 @@ export default function CasesPage() {
               <div
                 className={`group rounded-xl border bg-surface transition-all duration-300 ${
                   c.status === "live"
-                    ? "border-gold/25 hover:border-gold/60 cursor-pointer"
+                    ? "border-mechanism/25 hover:border-mechanism/60 cursor-pointer"
                     : "border-border/30 opacity-50 cursor-default"
                 }`}
               >
@@ -123,7 +123,7 @@ function CaseRow({
             Coming soon
           </span>
         ) : (
-          <span className="text-xs text-gold group-hover:translate-x-1 transition-transform inline-block">
+          <span className="text-xs text-mechanism group-hover:translate-x-1 transition-transform inline-block">
             Explore →
           </span>
         )}

@@ -108,7 +108,7 @@ export default function RwandaPage() {
                 This diagram shows the causal chain from upstream political
                 factors through mechanisms to observed outcomes. The dashed
                 amber lines show shadow effects — trade-offs and costs.{" "}
-                <span className="text-gold">Click any node</span> to open a
+                <span className="text-mechanism">Click any node</span> to open a
                 concept drill-down.
               </p>
             </ScrollReveal>
@@ -141,9 +141,9 @@ export default function RwandaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {rwanda.operationalTakeaways.map((t, i) => (
               <ScrollReveal key={t.id} delay={0.08 * i}>
-                <div className="p-6 rounded-xl border border-border/50 bg-surface hover:border-gold/30 transition-all">
+                <div className="p-6 rounded-xl border border-border/50 bg-surface hover:border-mechanism/30 transition-all">
                   <div className="flex items-start gap-3 mb-3">
-                    <span className="font-serif text-3xl text-gold/25 font-bold leading-none">
+                    <span className="font-serif text-3xl text-mechanism/25 font-bold leading-none">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h3 className="font-serif font-semibold text-text-primary leading-tight mt-1">

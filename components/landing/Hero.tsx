@@ -8,9 +8,9 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Ambient layers */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gold/4 rounded-full blur-[140px]" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-mechanism/4 rounded-full blur-[140px]" />
         <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-upstream/4 rounded-full blur-[120px]" />
-        <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] bg-mechanism/3 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] bg-gold/3 rounded-full blur-[100px]" />
         <div
           className="absolute inset-0 opacity-[0.025]"
           style={{
@@ -27,9 +27,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/30 bg-gold/5 text-gold text-xs font-medium tracking-widest uppercase mb-10"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mechanism/30 bg-mechanism/5 text-mechanism text-xs font-medium tracking-widest uppercase mb-10"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-mechanism animate-pulse" />
           Political Economy of Development
         </motion.div>
 
@@ -62,19 +62,19 @@ export default function Hero() {
           className="font-serif text-2xl md:text-3xl text-text-primary leading-relaxed mb-10 max-w-3xl mx-auto"
         >
           Then someone stops — and starts running{" "}
-          <span className="text-gold italic">upstream.</span>
+          <span className="text-mechanism italic">upstream.</span>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed mb-14 max-w-2xl mx-auto border-l-2 border-gold/40 pl-5 text-left mx-auto"
+          className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed mb-14 max-w-2xl mx-auto border-l-2 border-mechanism/40 pl-5 text-left mx-auto"
           style={{ marginLeft: "auto", marginRight: "auto" }}
         >
           "Where are you going? We need help here!"
           <br />
-          <span className="text-gold not-italic font-medium">"I'm going to find out who is pushing people into the river."</span>
+          <span className="text-mechanism not-italic font-medium">"I'm going to find out who is pushing people into the river."</span>
         </motion.div>
 
         {/* The turn */}
@@ -103,7 +103,7 @@ export default function Hero() {
         >
           Most development problems
           <br />
-          <span className="italic text-gold">have political roots.</span>
+          <span className="italic text-mechanism">have political roots.</span>
         </motion.h1>
 
         <motion.p

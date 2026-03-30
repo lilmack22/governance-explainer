@@ -51,7 +51,7 @@ export default function ConceptPanel({ conceptId, onClose }: Props) {
             {/* Header */}
             <div className="sticky top-0 bg-ink-900/95 backdrop-blur-md border-b border-border/50 px-6 py-5 flex items-start justify-between gap-4 z-10">
               <div className="flex-1">
-                <span className="text-[10px] font-medium text-gold tracking-widest uppercase block mb-1.5">
+                <span className="text-[10px] font-medium text-mechanism tracking-widest uppercase block mb-1.5">
                   Concept
                 </span>
                 <h2 className="font-serif text-xl font-bold text-text-primary leading-tight">
@@ -99,7 +99,7 @@ export default function ConceptPanel({ conceptId, onClose }: Props) {
                   {concept.traditions.map((t) => (
                     <span
                       key={t}
-                      className="text-[10px] px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20"
+                      className="text-[10px] px-2 py-0.5 rounded-full bg-mechanism/10 text-mechanism border border-mechanism/20"
                     >
                       {t}
                     </span>
@@ -154,7 +154,7 @@ export default function ConceptPanel({ conceptId, onClose }: Props) {
                       return (
                         <button
                           key={rc}
-                          className="text-xs px-3 py-1.5 rounded-lg border border-border/50 text-text-secondary hover:text-text-primary hover:border-gold/30 transition-all"
+                          className="text-xs px-3 py-1.5 rounded-lg border border-border/50 text-text-secondary hover:text-text-primary hover:border-mechanism/30 transition-all"
                         >
                           {related?.name ?? rc}
                         </button>
@@ -196,17 +196,17 @@ function Section({
   return (
     <div>
       <div className="flex items-center gap-2 mb-3">
-        <span className={accent ? "text-gold" : "text-text-muted"}>{icon}</span>
+        <span className={accent ? "text-mechanism" : "text-text-muted"}>{icon}</span>
         <p
           className={`text-[11px] font-semibold tracking-widest uppercase ${
-            accent ? "text-gold" : "text-text-muted"
+            accent ? "text-mechanism" : "text-text-muted"
           }`}
         >
           {title}
         </p>
       </div>
       {accent ? (
-        <div className="border-l-2 border-gold/40 pl-4">{children}</div>
+        <div className="border-l-2 border-mechanism/40 pl-4">{children}</div>
       ) : (
         children
       )}

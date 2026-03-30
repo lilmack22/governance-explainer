@@ -12,7 +12,7 @@ const cases = [
     question: "What explains the transformation from genocide to a capable state?",
     concepts: ["Political Settlement", "State Capacity", "Elite Bargain", "Developmental State"],
     status: "live" as const,
-    accent: "#d4a843",
+    accent: "#38bdf8",
   },
   {
     slug: "botswana",
@@ -22,7 +22,7 @@ const cases = [
     question: "How did Botswana avoid the resource curse when so many others didn't?",
     concepts: ["Institutions", "Resource Governance", "Elite Cohesion"],
     status: "coming-soon" as const,
-    accent: "#38bdf8",
+    accent: "#d4a843",
   },
   {
     slug: "liberia",
@@ -68,13 +68,13 @@ export default function CasesPreview() {
             <ScrollReveal key={c.slug} delay={0.08 * i}>
               <div className={`group relative rounded-xl border bg-surface overflow-hidden transition-all duration-300 ${
                 c.status === "live"
-                  ? "border-gold/30 hover:border-gold/60 cursor-pointer"
+                  ? "border-mechanism/30 hover:border-mechanism/60 cursor-pointer"
                   : "border-border/40 opacity-60 cursor-default"
               }`}>
                 {c.status === "live" ? (
                   <Link href={`/cases/${c.slug}`} className="block p-6">
                     <CaseCardContent case_={c} />
-                    <div className="mt-4 text-xs font-medium text-gold group-hover:gap-2 flex items-center gap-1 transition-all">
+                    <div className="mt-4 text-xs font-medium text-mechanism group-hover:gap-2 flex items-center gap-1 transition-all">
                       Explore case <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
                     </div>
                   </Link>
@@ -113,7 +113,7 @@ export default function CasesPreview() {
               },
             ].map((step, i) => (
               <div key={step.step} className="p-6 rounded-xl border border-border/40 bg-surface-raised">
-                <span className="font-serif text-4xl font-bold text-gold/20 block mb-3">
+                <span className="font-serif text-4xl font-bold text-mechanism/20 block mb-3">
                   {step.step}
                 </span>
                 <h3 className="font-serif text-lg font-semibold text-text-primary mb-2">
@@ -141,7 +141,7 @@ function CaseCardContent({ case_: c }: { case_: typeof cases[0] }) {
           </div>
         </div>
         {c.status === "live" && (
-          <span className="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
+          <span className="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-full bg-mechanism/10 text-mechanism border border-mechanism/20">
             Live
           </span>
         )}

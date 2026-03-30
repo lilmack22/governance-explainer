@@ -39,8 +39,8 @@ export default function CausalQuestion({ puzzle, causalQuestion, onReveal, revea
         className="flex flex-col items-center gap-2 my-8"
       >
         <div className="w-px h-10 bg-gradient-to-b from-border to-gold/40" />
-        <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center">
-          <span className="text-gold text-sm">?</span>
+        <div className="w-8 h-8 rounded-full border border-mechanism/40 flex items-center justify-center">
+          <span className="text-mechanism text-sm">?</span>
         </div>
         <div className="w-px h-10 bg-gradient-to-t from-border to-gold/40" />
       </motion.div>
@@ -64,13 +64,13 @@ export default function CausalQuestion({ puzzle, causalQuestion, onReveal, revea
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.7 }}
           onClick={onReveal}
-          className="group inline-flex items-center gap-3 px-7 py-3.5 bg-surface border border-gold/30 rounded-lg hover:border-gold/70 hover:bg-gold/5 transition-all text-sm text-text-primary"
+          className="group inline-flex items-center gap-3 px-7 py-3.5 bg-surface border border-mechanism/30 rounded-lg hover:border-mechanism/70 hover:bg-mechanism/5 transition-all text-sm text-text-primary"
         >
           <span>Show the causal mechanism</span>
           <motion.span
             animate={{ y: [0, 4, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="text-gold"
+            className="text-mechanism"
           >
             ↓
           </motion.span>

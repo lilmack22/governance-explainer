@@ -45,7 +45,7 @@ export default function CoreThesis() {
     <section className="py-28 px-6 relative" ref={ref}>
       {/* Strong ambient */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-gold/4 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-mechanism/4 rounded-full blur-[150px] pointer-events-none" />
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
@@ -61,7 +61,7 @@ export default function CoreThesis() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight">
             Downstream problems are often
             <br />
-            <span className="italic text-gold">sustained by upstream causes.</span>
+            <span className="italic text-mechanism">sustained by upstream causes.</span>
           </h2>
         </ScrollReveal>
 
@@ -80,7 +80,7 @@ export default function CoreThesis() {
           <ScrollReveal>
             <div className="grid grid-cols-3 gap-2 pb-2">
               {["Development problem", "Surface cause", "Upstream political/governance cause"].map((h, i) => (
-                <p key={h} className={`text-[10px] font-medium tracking-widest uppercase px-3 ${i === 2 ? "text-gold/70" : "text-text-muted"}`}>
+                <p key={h} className={`text-[10px] font-medium tracking-widest uppercase px-3 ${i === 2 ? "text-mechanism/70" : "text-text-muted"}`}>
                   {h}
                 </p>
               ))}
@@ -101,7 +101,7 @@ export default function CoreThesis() {
               <div className="px-4 py-4 bg-surface border border-border/30 flex items-center">
                 <p className="text-xs text-text-secondary leading-relaxed">{row.surface}</p>
               </div>
-              <div className="px-4 py-4 bg-gold/4 border border-gold/15 flex items-center">
+              <div className="px-4 py-4 bg-mechanism/4 border border-mechanism/15 flex items-center">
                 <p className="text-xs text-text-secondary leading-relaxed italic">{row.root}</p>
               </div>
             </motion.div>
@@ -123,12 +123,12 @@ export default function CoreThesis() {
               {
                 concept: "Institutional analysis",
                 body: "Rules, formal and informal, shape what is possible. Institutions determine whether a capable person in a broken system can succeed — and whether change outlasts individuals.",
-                color: "#38bdf8",
+                color: "#d4a843",
               },
               {
                 concept: "Power and settlement analysis",
                 body: "Development outcomes are often the by-products of elite bargains. Understanding who holds power, on what terms, and with what stability, explains much of what sector analysis leaves obscure.",
-                color: "#d4a843",
+                color: "#38bdf8",
               },
             ].map((item, i) => (
               <motion.div
@@ -155,7 +155,7 @@ export default function CoreThesis() {
             <p className="font-serif text-2xl md:text-3xl text-text-primary italic leading-relaxed max-w-3xl mx-auto">
               To understand development, you have to understand politics.
               Not as background noise — as a{" "}
-              <span className="text-gold not-italic font-bold">causal mechanism.</span>
+              <span className="text-mechanism not-italic font-bold">causal mechanism.</span>
             </p>
             <div className="w-px h-16 bg-gradient-to-b from-gold/50 to-transparent mx-auto mt-8" />
           </div>

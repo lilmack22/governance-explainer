@@ -19,7 +19,7 @@ export default function Nav() {
         <Link href="/" className="flex items-center gap-2 group">
           <Globe
             size={18}
-            className="text-gold opacity-80 group-hover:opacity-100 transition-opacity"
+            className="text-mechanism opacity-80 group-hover:opacity-100 transition-opacity"
           />
           <span className="font-serif text-sm font-semibold tracking-wide text-text-primary/90 group-hover:text-text-primary transition-colors">
             Governance Matters
@@ -42,7 +42,7 @@ export default function Nav() {
                 {active && (
                   <motion.span
                     layoutId="nav-indicator"
-                    className="absolute -bottom-[17px] left-0 right-0 h-[1px] bg-gold"
+                    className="absolute -bottom-[17px] left-0 right-0 h-[1px] bg-mechanism"
                   />
                 )}
               </Link>
@@ -51,7 +51,7 @@ export default function Nav() {
 
           <Link
             href="/cases/rwanda"
-            className="ml-2 px-3 py-1.5 text-xs font-medium tracking-wide bg-gold/10 text-gold border border-gold/30 rounded hover:bg-gold/20 transition-all"
+            className="ml-2 px-3 py-1.5 text-xs font-medium tracking-wide bg-mechanism/10 text-mechanism border border-mechanism/30 rounded hover:bg-mechanism/20 transition-all"
           >
             Explore Rwanda →
           </Link>

@@ -13,11 +13,11 @@ export const nodeTypeConfig = {
   },
   mechanism: {
     label: "Mechanism",
-    color: "#38bdf8",
+    color: "#d4a843",
     glow: "rgba(56,189,248,0.35)",
     bg: "rgba(56,189,248,0.08)",
-    border: "#38bdf8",
-    tailwind: "text-mechanism",
+    border: "#d4a843",
+    tailwind: "text-gold",
   },
   outcome: {
     label: "Outcome",

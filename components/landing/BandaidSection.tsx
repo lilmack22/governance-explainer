@@ -58,7 +58,7 @@ export default function BandaidSection() {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-5 leading-tight">
             The problem isn't that we're ignorant.
             <br />
-            <span className="italic text-gold">The problem is where we look.</span>
+            <span className="italic text-mechanism">The problem is where we look.</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
             Most development failures have two faces. One is visible — the broken clinic,
@@ -77,7 +77,7 @@ export default function BandaidSection() {
                 </span>
               </div>
               <div className="text-center pb-3">
-                <span className="text-[10px] font-medium tracking-widest uppercase text-gold/70">
+                <span className="text-[10px] font-medium tracking-widest uppercase text-mechanism/70">
                   What sustains it
                 </span>
               </div>
@@ -98,8 +98,8 @@ export default function BandaidSection() {
                 <p className="text-sm text-text-secondary leading-snug">{row.symptom}</p>
               </div>
               {/* Root cause */}
-              <div className="rounded-lg p-4 bg-gold/5 border border-gold/20 flex items-start gap-3">
-                <span className="text-gold text-lg mt-0.5 shrink-0">↑</span>
+              <div className="rounded-lg p-4 bg-mechanism/5 border border-mechanism/20 flex items-start gap-3">
+                <span className="text-mechanism text-lg mt-0.5 shrink-0">↑</span>
                 <p className="text-sm text-text-secondary leading-snug italic">{row.cause}</p>
               </div>
             </motion.div>
@@ -120,9 +120,9 @@ export default function BandaidSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-20">
           {upstream.map((item, i) => (
             <ScrollReveal key={item.label} delay={0.06 * i}>
-              <div className="p-5 rounded-xl border border-gold/20 bg-gradient-to-br from-gold/5 to-transparent h-full">
+              <div className="p-5 rounded-xl border border-mechanism/20 bg-gradient-to-br from-gold/5 to-transparent h-full">
                 <span className="text-2xl block mb-3">{item.icon}</span>
-                <p className="text-sm font-semibold text-gold leading-snug mb-1.5">{item.label}</p>
+                <p className="text-sm font-semibold text-mechanism leading-snug mb-1.5">{item.label}</p>
                 <p className="text-xs text-text-muted leading-relaxed">{item.sub}</p>
               </div>
             </ScrollReveal>
@@ -131,8 +131,8 @@ export default function BandaidSection() {
 
         {/* Pull quote */}
         <ScrollReveal>
-          <div className="relative border border-gold/20 rounded-2xl p-8 md:p-12 bg-gradient-to-br from-gold/4 to-transparent text-center">
-            <span className="absolute -top-5 left-1/2 -translate-x-1/2 px-4 bg-ink-950 text-gold/30 text-6xl font-serif leading-none">"</span>
+          <div className="relative border border-mechanism/20 rounded-2xl p-8 md:p-12 bg-gradient-to-br from-gold/4 to-transparent text-center">
+            <span className="absolute -top-5 left-1/2 -translate-x-1/2 px-4 bg-ink-950 text-mechanism/30 text-6xl font-serif leading-none">"</span>
             <p className="font-serif text-xl md:text-2xl text-text-primary italic leading-snug max-w-3xl mx-auto">
               Political science matters for development work because many outcomes
               that look like sector problems are actually governance problems.

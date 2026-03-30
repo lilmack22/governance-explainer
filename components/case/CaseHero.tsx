@@ -13,7 +13,7 @@ export default function CaseHero({ caseStudy }: Props) {
       {/* Background ambience */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950 via-ink-900/40 to-ink-950" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-gold/4 rounded-full blur-[150px]" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-mechanism/4 rounded-full blur-[150px]" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-upstream/3 rounded-full blur-[100px]" />
       </div>
 
@@ -60,7 +60,7 @@ export default function CaseHero({ caseStudy }: Props) {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="text-lg md:text-2xl text-gold font-medium italic mb-4 max-w-3xl"
+          className="text-lg md:text-2xl text-mechanism font-medium italic mb-4 max-w-3xl"
         >
           {caseStudy.transformationHeadline}
         </motion.p>
