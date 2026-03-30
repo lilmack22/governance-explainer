@@ -1,0 +1,81 @@
+The upstream / downstream metaphor comes from a simple public health parable — often called:
+
+“The River Story” or “The Rescue Parable”
+
+⸻
+
+THE ORIGINAL ANECDOTE (CORE VERSION)
+
+Imagine you’re standing by a river.
+
+You see someone floating downstream, struggling.
+
+You jump in and pull them out.
+
+Then another person comes.
+
+Then another.
+
+Soon, people are coming faster than you can rescue them.
+
+You and others start forming a chain, pulling people out as quickly as possible.
+
+Then suddenly, one person stops and starts running upstream.
+
+You shout:
+
+“Where are you going? We need help here!”
+
+They reply:
+
+“I’m going to find out who is pushing people into the river.”
+
+⸻
+
+WHAT IT’S TRYING TO TEACH
+	•	Downstream = where harm shows up
+	•	hospitals, emergency response, poverty relief programs, conflict mitigation
+	•	Upstream = where causes originate
+	•	policies, incentives, institutions, power structures, prevention
+
+The punchline is:
+
+You can keep rescuing people indefinitely —
+or you can go upstream and stop the problem at its source.
+
+⸻
+
+WHERE IT COMES FROM (INTELLECTUAL LINEAGE)
+	•	Widely used in public health and preventive medicine
+	•	Often attributed (in spirit) to Irving Zola (1970s), who argued medicine focuses too much on treating illness rather than preventing it
+	•	Popularized in modern policy circles by Dan Heath in the book Upstream (2020)
+	•	Also deeply embedded in epidemiology, social determinants of health, and development policy
+
+⸻
+
+WHY IT’S SO POWERFUL
+
+It encodes three ideas at once:
+	1.	Causal sequencing → problems originate earlier than where we see them
+	2.	Resource allocation → downstream work is endless and reactive
+	3.	Prevention vs treatment tradeoff → upstream work is harder but more durable
+
+⸻
+
+HOW IT MAPS TO YOUR APP (VERY CLEANLY)
+
+Your framing:
+	•	clinics without accountability
+	•	elite capture
+	•	weak enforcement
+
+maps perfectly onto:
+	•	people drowning (visible problem)
+	•	vs
+	•	someone pushing them in (political/institutional causes)
+
+-----
+
+Many interventions focus on where problems appear. But the forces producing them often sit earlier in the system.
+
+That’s upstream thinking — without invoking the river explicitly.

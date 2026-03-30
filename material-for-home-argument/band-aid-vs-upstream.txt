@@ -1,0 +1,29 @@
+The "Band-aid vs upstream" section of the app should make one big idea feel obvious:
+
+Development problems often show up in sectors, but many of their deepest causes sit in politics and governance.
+So if you only treat symptoms, you keep applying band-aids. If you understand incentives, institutions, power, and state capacity, you get closer to the root.
+
+Core concept
+
+Start with a simple contrast:
+
+BAND-AID LAYER
+	•	clinics without health worker accountability
+	•	schools without teacher attendance
+	•	anti-poverty programs captured by local elites
+	•	anti-deforestation rules without enforcement
+	•	police reform without political control of coercive actors
+	•	anti-trafficking laws without credible prosecution
+
+UPSTREAM / ROOT-CAUSE LAYER
+	•	who holds power
+	•	what incentives leaders face
+	•	whether the state can implement policy
+	•	whether institutions constrain predation
+	•	whether local actors trust the state
+	•	whether violence is politically useful
+	•	whether rents from land, gold, timber, or drugs distort governance
+
+That lets you say something like:
+
+Political science matters for World Bank work because many outcomes that look like “sector problems” are actually partly governance problems. Governance is not everything, but it often structures whether policy is implemented, who benefits, whether violence is contained, and whether development gains last.

@@ -1,0 +1,240 @@
+Here are some case studies of organizations and interventions that fail to address root issues (even if they may still be helpful or needed in the short run). You can view this as a sort of taxonomy of intervention depth, which is exactly how a lot of political economy critiques of development operate. Please use these concrete, visualizable examples as you make the case about the need for upstream analysis and intervention. These examples are organized from most visibly “downstream” (tangible fixes) → more complex hybrid models.
+
+⸻
+
+1. HOUSEHOLD-LEVEL “TECH FIXES” (VERY CONCRETE, HIGHLY VISIBLE)
+
+These are perfect examples of what you’re trying to capture: they solve a real problem at the point of use, without changing the system producing the problem.
+
+CLEAN WATER PRODUCTS
+
+Examples:
+	•	LifeStraw
+	•	Pure Water for the World
+	•	Chlorine tablet distribution programs (e.g., PSI)
+
+What they do:
+	•	Filter or disinfect contaminated water at the household level
+
+Downstream logic:
+	•	“Water is unsafe → make this water safe to drink”
+
+What they don’t change:
+	•	Public water infrastructure
+	•	State capacity for water provision
+	•	Regulatory systems
+	•	Political incentives around service delivery
+
+👉 Intuition:
+You’re fixing the water at the cup, not the pipes, governance, or financing system
+
+⸻
+
+SOLAR LIGHTING (OFF-GRID ENERGY)
+
+Examples:
+	•	d.light
+	•	M-KOPA
+	•	Solar Sister
+
+What they do:
+	•	Provide solar lamps / small home systems where there’s no grid electricity
+
+Downstream logic:
+	•	“No electricity → provide an alternative device”
+
+What they don’t change:
+	•	National grid expansion
+	•	Energy policy / regulation
+	•	Utility governance
+	•	Political economy of electrification
+
+👉 Intuition:
+You’re bringing light to the room, not building the grid
+
+⸻
+
+CLEAN COOKSTOVES
+
+Examples:
+	•	Envirofit
+	•	Clean Cooking Alliance
+
+What they do:
+	•	Reduce indoor air pollution with improved stoves
+
+Downstream logic:
+	•	“Smoke exposure → reduce emissions at point of cooking”
+
+What they don’t change:
+	•	Fuel markets
+	•	Energy infrastructure
+	•	Urbanization / housing conditions
+	•	Environmental regulation
+
+⸻
+
+2. DIRECT GOODS & “GIVEAWAY” MODELS
+
+These match your original intuition very closely.
+
+ICONIC EXAMPLES
+
+TOMS Shoes
+	•	Gives shoes to children
+
+Warby Parker
+	•	“Buy a pair, give a pair” glasses
+
+What they do:
+	•	Provide essential goods directly
+
+Downstream logic:
+	•	“People lack X → give them X”
+
+Critiques:
+	•	Market distortion (local producers)
+	•	No systemic change in income generation
+
+👉 Intuition:
+You’re filling the gap, not changing why the gap exists
+
+⸻
+
+3. HEALTH “VERTICAL” INTERVENTIONS
+
+These are extremely impactful—but still often symptom-focused.
+
+EXAMPLES
+	•	Gavi, the Vaccine Alliance
+	•	The Global Fund to Fight AIDS, Tuberculosis and Malaria
+	•	Bed net distribution programs (e.g., via Against Malaria Foundation)
+
+What they do:
+	•	Target specific diseases with highly effective tools
+
+Downstream logic:
+	•	“Disease burden → deliver intervention (vaccine, net, drug)”
+
+What they don’t fully change:
+	•	Health system governance
+	•	Public financing capacity
+	•	Political accountability in health delivery
+
+👉 Intuition:
+You’re fighting the disease, not rebuilding the health system that fails to prevent it
+
+⸻
+
+4. NGO SERVICE DELIVERY (SUBSTITUTING FOR THE STATE)
+
+These are more complex and often very high-quality—but still frequently operate in a “gap-filling” role.
+
+EXAMPLES
+	•	Partners In Health
+	•	BRAC
+
+What they do:
+	•	Build clinics, run schools, provide services
+
+Downstream element:
+	•	Deliver services directly where the state cannot
+
+Tension:
+	•	Can unintentionally:
+	•	reduce pressure on governments
+	•	create parallel systems
+
+👉 Intuition:
+You’re acting as the state, not changing how the state works
+
+⸻
+
+5. MICROFINANCE & INDIVIDUAL-LEVEL ECONOMIC FIXES
+
+EXAMPLES
+	•	Grameen Bank
+	•	Kiva
+
+What they do:
+	•	Provide credit to individuals
+
+Downstream logic:
+	•	“People lack capital → give loans”
+
+What they don’t change:
+	•	Labor markets
+	•	Industrial structure
+	•	Political barriers to business formation
+
+👉 Intuition:
+You’re unlocking individuals, not restructuring the economy
+
+⸻
+
+6. “TECH-OPTIMIST” DEVELOPMENT PRODUCTS
+
+These often look innovative—but still operate at the symptom level.
+
+EXAMPLES
+	•	Agricultural apps giving farmers price info
+	•	EdTech tablets for rural schools
+	•	Mobile health (mHealth) diagnostics
+
+Often funded or supported by orgs like:
+	•	Bill & Melinda Gates Foundation
+
+Downstream logic:
+	•	“Information or tool gap → provide technology”
+
+What they may underweight:
+	•	Institutional adoption
+	•	Incentives to use tools
+	•	Political constraints
+
+⸻
+
+SYNTHESIS: A SIMPLE TYPOLOGY YOU CAN USE
+
+You can collapse all of this into a very clean conceptual ladder:
+
+LEVEL 1 — POINT-OF-USE FIXES
+	•	Water filters, solar lamps, cookstoves
+→ Fix the immediate experience
+
+LEVEL 2 — GOODS TRANSFERS
+	•	Shoes, glasses, food aid
+→ Fill resource gaps
+
+LEVEL 3 — TARGETED PROGRAMS
+	•	Vaccines, bed nets
+→ Attack specific problems
+
+LEVEL 4 — SERVICE DELIVERY
+	•	Clinics, schools
+→ Substitute for weak systems
+
+(Missing layer — what you’re pointing to)
+
+LEVEL 5 — SYSTEMIC / UPSTREAM
+	•	State capacity
+	•	Political incentives
+	•	Institutional reform
+
+⸻
+
+HOW TO FRAME THIS (YOUR CORE INSIGHT, REFINED)
+
+Here’s a version that fits your voice and is analytically tight:
+
+Many development interventions operate at the level of lived constraints — unsafe water, lack of light, disease exposure, missing goods. These interventions can be highly effective and often lifesaving.
+
+But because they operate at the point where problems are experienced, rather than where they are generated, their impact is often bounded by the persistence of the underlying systems that reproduce those problems.
+
+⸻
+
+One option/visualization:
+	•	Map each example to “what upstream mechanism would need to change”
+(e.g., solar lamp → electrification politics, tariffs, utility governance)
+
+That would turn this from a critique into a causal exploration tool.
