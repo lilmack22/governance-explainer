@@ -60,9 +60,9 @@ export default function Hero() {
           className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed mb-14 max-w-2xl mx-auto border-l-2 border-mechanism/40 pl-5 text-left mx-auto"
           style={{ marginLeft: "auto", marginRight: "auto" }}
         >
-          "Where are you going? We need help here!"
+          Others shout, &ldquo;Where are you going? We need help here!&rdquo;
           <br />
-          <span className="text-mechanism not-italic font-medium">"I'm going to find out who is pushing people into the river."</span>
+          <span className="text-mechanism not-italic font-medium">They say, &ldquo;I&apos;m going to find out who is pushing people into the river.&rdquo;</span>
         </motion.div>
 
         {/* Scroll transition */}
