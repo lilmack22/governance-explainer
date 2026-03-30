@@ -89,7 +89,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.15, ease: [0.22, 1, 0.36, 1] }}
           className="space-y-5 mb-14"
         >
-          <p className="font-serif text-2xl md:text-3xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
+          <p className="font-sans text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
             Much of what we call "development" happens at the riverbank. Especially in the nonprofit sector, problems are often tackled downstream, close to where they manifest visibly.
             Organizations provide school supplies, deliver vaccines, build
             clinics, give loans. These things matter — they save lives.
