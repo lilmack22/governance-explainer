@@ -45,8 +45,7 @@ export default function BandaidSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-28 px-6 relative overflow-hidden" ref={ref}>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ink-800/10 to-transparent pointer-events-none" />
+    <section className="py-28 px-6 relative overflow-hidden border-t border-border/30" ref={ref}>
 
       <div className="max-w-5xl mx-auto">
 

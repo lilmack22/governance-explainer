@@ -7,9 +7,6 @@ import { motion } from "framer-motion";
 export default function CaseCTA() {
   return (
     <section className="py-28 px-6 border-t border-border/30 relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-mechanism/5 rounded-full blur-[120px] pointer-events-none" />
-      </div>
 
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <ScrollReveal>

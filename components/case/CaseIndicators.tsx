@@ -51,7 +51,7 @@ export default function CaseIndicators({ indicators }: Props) {
             <div className="text-center">
               <p
                 className="text-2xl font-bold font-serif"
-                style={{ color: ind.trend === "up" ? "#34d399" : "#34d399" }}
+                style={{ color: ind.trend === "up" ? "#4372C8" : "#4372C8" }}
               >
                 {ind.valueAfter}
               </p>

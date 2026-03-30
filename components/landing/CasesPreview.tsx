@@ -12,7 +12,7 @@ const cases = [
     question: "What explains the transformation from genocide to a capable state?",
     concepts: ["Political Settlement", "State Capacity", "Elite Bargain", "Developmental State"],
     status: "live" as const,
-    accent: "#38bdf8",
+    accent: "#6495ED",
   },
   {
     slug: "botswana",
@@ -22,7 +22,7 @@ const cases = [
     question: "How did Botswana avoid the resource curse when so many others didn't?",
     concepts: ["Institutions", "Resource Governance", "Elite Cohesion"],
     status: "coming-soon" as const,
-    accent: "#38bdf8",
+    accent: "#6495ED",
   },
   {
     slug: "liberia",
@@ -32,7 +32,7 @@ const cases = [
     question: "What explains the limits of post-conflict state-building in Liberia?",
     concepts: ["Elite Bargain", "Statebuilding", "Donor Dependency"],
     status: "coming-soon" as const,
-    accent: "#34d399",
+    accent: "#4372C8",
   },
   {
     slug: "indonesia",
@@ -42,7 +42,7 @@ const cases = [
     question: "How did Indonesia manage democratic transition after Suharto without collapse?",
     concepts: ["Political Transition", "Decentralization", "Patronage Networks"],
     status: "coming-soon" as const,
-    accent: "#8b5cf6",
+    accent: "#8CB3F4",
   },
 ];
 

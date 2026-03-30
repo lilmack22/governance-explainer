@@ -42,11 +42,7 @@ export default function CoreThesis() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-28 px-6 relative" ref={ref}>
-      {/* Strong ambient */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-mechanism/4 rounded-full blur-[150px] pointer-events-none" />
-      </div>
+    <section className="py-28 px-6 relative border-t border-border/30" ref={ref}>
 
       <div className="max-w-5xl mx-auto relative z-10">
 
@@ -118,17 +114,17 @@ export default function CoreThesis() {
               {
                 concept: "Incentive analysis",
                 body: "Leaders do what they are rewarded for. Political science maps those reward structures — who gives power, who can take it away, and what behavior that produces.",
-                color: "#8b5cf6",
+                color: "#8CB3F4",
               },
               {
                 concept: "Institutional analysis",
                 body: "Rules, formal and informal, shape what is possible. Institutions determine whether a capable person in a broken system can succeed — and whether change outlasts individuals.",
-                color: "#38bdf8",
+                color: "#6495ED",
               },
               {
                 concept: "Power and settlement analysis",
                 body: "Development outcomes are often the by-products of elite bargains. Understanding who holds power, on what terms, and with what stability, explains much of what sector analysis leaves obscure.",
-                color: "#38bdf8",
+                color: "#4372C8",
               },
             ].map((item, i) => (
               <motion.div

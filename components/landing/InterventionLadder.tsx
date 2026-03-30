@@ -68,7 +68,7 @@ const levels = [
   {
     number: "05",
     label: "What's actually upstream",
-    color: "#38bdf8",
+    color: "#6495ED",
     dimColor: "rgba(212,168,67,0.07)",
     border: "rgba(212,168,67,0.40)",
     description: "The political and institutional conditions that determine whether anything else works — or lasts.",

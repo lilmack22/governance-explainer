@@ -58,10 +58,10 @@ export default function CausalDiagram({
         const isCritique = e.edgeType === "critique";
         const sourceNode = causalNodes.find((n) => n.id === e.source);
         const edgeColor = isCritique
-          ? "#f59e0b"
+          ? "#6B7B90"
           : sourceNode
           ? nodeTypeConfig[sourceNode.nodeType].color
-          : "#38bdf8";
+          : "#6B7B90";
 
         return {
           id: e.id,

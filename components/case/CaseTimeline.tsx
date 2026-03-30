@@ -5,11 +5,11 @@ import { motion, useInView } from "framer-motion";
 import type { TimelineEvent } from "@/data/types";
 
 const typeConfig: Record<TimelineEvent["type"], { color: string; bg: string; dot: string }> = {
-  crisis:     { color: "#ef4444", bg: "rgba(239,68,68,0.08)",   dot: "bg-red-500" },
-  transition: { color: "#38bdf8", bg: "rgba(56,189,248,0.08)", dot: "bg-sky-400" },
-  reform:     { color: "#8b5cf6", bg: "rgba(139,92,246,0.08)", dot: "bg-violet-500" },
-  outcome:    { color: "#34d399", bg: "rgba(52,211,153,0.08)", dot: "bg-emerald-400" },
-  tension:    { color: "#f59e0b", bg: "rgba(245,158,11,0.08)", dot: "bg-amber-500" },
+  crisis:     { color: "#C5635A", bg: "rgba(197,99,90,0.07)",    dot: "bg-red-500/80" },
+  transition: { color: "#6495ED", bg: "rgba(100,149,237,0.07)",  dot: "bg-[#6495ED]" },
+  reform:     { color: "#8CB3F4", bg: "rgba(140,179,244,0.07)",  dot: "bg-[#8CB3F4]" },
+  outcome:    { color: "#4372C8", bg: "rgba(67,114,200,0.07)",   dot: "bg-[#4372C8]" },
+  tension:    { color: "#6B7B90", bg: "rgba(107,123,144,0.06)",  dot: "bg-[#6B7B90]" },
 };
 
 interface Props {

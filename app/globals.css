@@ -7,28 +7,33 @@
 
   /* Dark navy palette */
   --color-ink-950: #050c1a;
-  --color-ink-900: #0a1128;
-  --color-ink-800: #0f1c3f;
-  --color-ink-700: #1a2f52;
-  --color-surface: #0d1526;
-  --color-surface-raised: #111d35;
-  --color-border: #1e2d45;
+  --color-ink-900: #0a1120;
+  --color-ink-800: #0e1a38;
+  --color-ink-700: #162844;
+  --color-surface: #0c1422;
+  --color-surface-raised: #101c32;
+  --color-border: #1c2a40;
 
-  /* Accent gold */
-  --color-gold: #38bdf8;
-  --color-gold-light: #f0c158;
-  --color-gold-dark: #a07b2e;
+  /* Cornflower blue — three shades */
+  --color-accent:       #6495ED;   /* cornflower primary */
+  --color-accent-light: #8CB3F4;   /* lighter cornflower */
+  --color-accent-deep:  #4372C8;   /* deeper cornflower */
 
-  /* Concept node colors */
-  --color-upstream: #8b5cf6;
-  --color-mechanism: #38bdf8;
-  --color-outcome: #34d399;
-  --color-critique: #f59e0b;
+  /* Legacy aliases (used throughout components) */
+  --color-gold: #6495ED;
+  --color-gold-light: #8CB3F4;
+  --color-gold-dark: #4372C8;
 
-  /* Text */
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #64748b;
+  /* Concept node colors — all cornflower family + neutral */
+  --color-upstream: #8CB3F4;   /* light cornflower — root cause */
+  --color-mechanism: #6495ED;  /* primary cornflower — mechanism */
+  --color-outcome: #4372C8;    /* deep cornflower — outcome */
+  --color-critique: #6B7B90;   /* muted blue-grey — shadow/critique */
+
+  /* Text — clean blacks/whites/greys */
+  --color-text-primary: #EEF2F7;
+  --color-text-secondary: #8A9BB0;
+  --color-text-muted: #5A6A80;
 
   /* Custom keyframe animations */
   --animate-fade-in: fade-in 0.7s ease-out forwards;
@@ -59,7 +64,7 @@ html {
 
 body {
   background-color: #050c1a;
-  color: #f1f5f9;
+  color: #EEF2F7;
   font-family: var(--inter, Inter, system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,39 +75,38 @@ h1, h2, h3, h4 {
 }
 
 ::selection {
-  background: rgba(212, 168, 67, 0.25);
-  color: #f1f5f9;
+  background: rgba(100, 149, 237, 0.20);
+  color: #EEF2F7;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar        { width: 5px; }
 ::-webkit-scrollbar-track  { background: #050c1a; }
-::-webkit-scrollbar-thumb  { background: #1e2d45; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+::-webkit-scrollbar-thumb  { background: #1c2a40; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6495ED; }
 
 /* React Flow overrides */
 .react-flow__background { background: transparent !important; }
 .react-flow__edge-path { stroke-width: 2; }
 
-/* Simple utility mappings for theme tokens (used across components) */
-.text-gold { color: var(--color-gold) !important; }
-.text-mechanism { color: var(--color-gold) !important; }
-.text-upstream { color: var(--color-upstream) !important; }
-.text-outcome { color: var(--color-outcome) !important; }
-.text-critique { color: var(--color-critique) !important; }
+/* Utility class mappings for theme tokens */
+.text-gold      { color: var(--color-accent) !important; }
+.text-mechanism { color: var(--color-accent) !important; }
+.text-upstream  { color: var(--color-upstream) !important; }
+.text-outcome   { color: var(--color-outcome) !important; }
+.text-critique  { color: var(--color-critique) !important; }
 
-.bg-gold { background-color: var(--color-gold) !important; }
-.bg-mechanism { background-color: var(--color-mechanism) !important; }
+.bg-gold      { background-color: var(--color-accent) !important; }
+.bg-mechanism { background-color: var(--color-accent) !important; }
 
-.border-gold { border-color: var(--color-gold) !important; }
-.border-mechanism { border-color: var(--color-mechanism) !important; }
+.border-gold      { border-color: var(--color-accent) !important; }
+.border-mechanism { border-color: var(--color-accent) !important; }
 
-/* Support for variable opacity forms like text-mechanism/30 via attribute selector */
-[class*="text-mechanism/"] { color: var(--color-gold) !important; }
-[class*="bg-mechanism/"] { background-color: var(--color-mechanism) !important; }
-[class*="border-mechanism/"] { border-color: var(--color-mechanism) !important; }
+[class*="text-mechanism/"]  { color: var(--color-accent) !important; }
+[class*="bg-mechanism/"]    { background-color: rgba(100,149,237,var(--tw-bg-opacity,1)) !important; }
+[class*="border-mechanism/"]{ border-color: var(--color-accent) !important; }
 
-[class*="text-gold/"] { color: var(--color-gold) !important; }
-[class*="bg-gold/"] { background-color: var(--color-gold) !important; }
-[class*="border-gold/"] { border-color: var(--color-gold) !important; }
+[class*="text-gold/"]   { color: var(--color-accent) !important; }
+[class*="bg-gold/"]     { background-color: rgba(100,149,237,var(--tw-bg-opacity,1)) !important; }
+[class*="border-gold/"] { border-color: var(--color-accent) !important; }
 

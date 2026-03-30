@@ -6,20 +6,8 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Ambient layers */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-mechanism/4 rounded-full blur-[140px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-upstream/4 rounded-full blur-[120px]" />
-        <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] bg-gold/3 rounded-full blur-[100px]" />
-        <div
-          className="absolute inset-0 opacity-[0.025]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div>
+      {/* Subtle top separator line only */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-border/40" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 pb-16">
         {/* Eyebrow */}
@@ -27,9 +15,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mechanism/30 bg-mechanism/5 text-mechanism text-xs font-medium tracking-widest uppercase mb-10"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-mechanism/25 bg-mechanism/5 text-mechanism text-xs font-medium tracking-widest uppercase mb-10"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-mechanism animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-mechanism opacity-70" />
           Introduction
         </motion.div>
 
