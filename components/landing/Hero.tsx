@@ -57,11 +57,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed mb-14 max-w-2xl mx-auto border-l-2 border-mechanism/40 pl-5 text-left mx-auto"
-          style={{ marginLeft: "auto", marginRight: "auto" }}
+          className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed mb-14 max-w-2xl mx-auto text-center"
         >
           Others shout, &ldquo;Where are you going? We need help here!&rdquo;
-          <br />
+          <br /><br />
           <span className="text-mechanism not-italic font-medium">They say, &ldquo;I&apos;m going to find out who is pushing people into the river.&rdquo;</span>
         </motion.div>
 
