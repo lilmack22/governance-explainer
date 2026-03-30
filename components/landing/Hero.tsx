@@ -90,12 +90,12 @@ export default function Hero() {
           className="space-y-5 mb-14"
         >
           <p className="font-serif text-2xl md:text-3xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
-            Most of what we call "development" happens at the riverbank.
-            We filter water at the cup. We deliver vaccines. We build
-            clinics. We give loans. These things matter — they save lives.
+            Much of what we call "development" happens at the riverbank. Especially in the nonprofit sector, problems are often tackled downstream, close to where they manifest visibly.
+            Organizations provide school supplies, deliver vaccines, build
+            clinics, give loans. These things matter — they save lives.
           </p>
           <p className="font-serif text-2xl md:text-3xl text-text-primary font-semibold leading-relaxed max-w-2xl mx-auto">
-            But they do not change who is upstream, or why they keep pushing.
+            But they do not change who is upstream, or why they keep pushing people into a perilous fate.
           </p>
         </motion.div>
 
@@ -106,7 +106,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.3, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-4xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight mb-6"
         >
-          Most development problems
+          When we keep going upstream, we see that
           <br />
           <span className="italic text-mechanism">have political roots.</span>
         </motion.h1>
