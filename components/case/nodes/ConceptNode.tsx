@@ -12,6 +12,8 @@ export interface ConceptNodeData {
   description: string;
   selected?: boolean;
   animationDelay?: number;
+  vertical?: boolean;
+  year?: string;
   [key: string]: unknown;
 }
 
@@ -20,6 +22,7 @@ const ConceptNode = memo(function ConceptNode({
   selected,
 }: NodeProps & { data: ConceptNodeData }) {
   const cfg = nodeTypeConfig[data.nodeType];
+  const vertical = !!data.vertical;
 
   return (
     <motion.div
@@ -55,18 +58,25 @@ const ConceptNode = memo(function ConceptNode({
             : `0 2px 12px rgba(0,0,0,0.3)`,
         }}
       >
-        {/* Type badge */}
-        <div className="flex items-center gap-1.5 mb-2">
-          <span
-            className="inline-block w-1.5 h-1.5 rounded-full"
-            style={{ background: cfg.color }}
-          />
-          <span
-            className="text-[9px] font-medium tracking-widest uppercase"
-            style={{ color: cfg.color, opacity: 0.8 }}
-          >
-            {cfg.label}
-          </span>
+        {/* Type badge + year */}
+        <div className="flex items-center justify-between gap-1.5 mb-2">
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block w-1.5 h-1.5 rounded-full"
+              style={{ background: cfg.color }}
+            />
+            <span
+              className="text-[9px] font-medium tracking-widest uppercase"
+              style={{ color: cfg.color, opacity: 0.8 }}
+            >
+              {cfg.label}
+            </span>
+          </div>
+          {data.year && (
+            <span className="text-[9px] font-mono text-text-muted opacity-60 shrink-0">
+              {data.year as string}
+            </span>
+          )}
         </div>
 
         {/* Label */}
@@ -90,16 +100,33 @@ const ConceptNode = memo(function ConceptNode({
       </div>
 
       {/* React Flow handles */}
-      <Handle
-        type="target"
-        position={Position.Left}
-        style={{ background: cfg.color, border: "none", width: 6, height: 6, left: -3 }}
-      />
-      <Handle
-        type="source"
-        position={Position.Right}
-        style={{ background: cfg.color, border: "none", width: 6, height: 6, right: -3 }}
-      />
+      {vertical ? (
+        <>
+          <Handle
+            type="target"
+            position={Position.Top}
+            style={{ background: cfg.color, border: "none", width: 6, height: 6, top: -3 }}
+          />
+          <Handle
+            type="source"
+            position={Position.Bottom}
+            style={{ background: cfg.color, border: "none", width: 6, height: 6, bottom: -3 }}
+          />
+        </>
+      ) : (
+        <>
+          <Handle
+            type="target"
+            position={Position.Left}
+            style={{ background: cfg.color, border: "none", width: 6, height: 6, left: -3 }}
+          />
+          <Handle
+            type="source"
+            position={Position.Right}
+            style={{ background: cfg.color, border: "none", width: 6, height: 6, right: -3 }}
+          />
+        </>
+      )}
     </motion.div>
   );
 });

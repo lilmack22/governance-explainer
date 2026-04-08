@@ -3,39 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-const mechanisms = [
-  {
-    domain: "Poverty & inequality",
-    surface: "Insufficient income, unequal distribution",
-    root: "Elite capture of redistributive mechanisms; labor markets shaped by patronage; land rights distorted by political power",
-  },
-  {
-    domain: "Weak service delivery",
-    surface: "Clinics and schools that don't function",
-    root: "No political incentive for leaders to deliver to broad populations; accountability to elites, not citizens",
-  },
-  {
-    domain: "Conflict & fragility",
-    surface: "Violence, displacement, instability",
-    root: "Unstable elite bargains; groups excluded from power; violence as rational political strategy; resource rents funding armed actors",
-  },
-  {
-    domain: "Environmental destruction",
-    surface: "Deforestation, illegal mining, pollution",
-    root: "Resource rents captured by politically connected actors; enforcement impossible against those who own the enforcers",
-  },
-  {
-    domain: "Low learning outcomes",
-    surface: "Children who complete school without learning",
-    root: "Teacher unions protecting attendance without accountability; curriculum decisions serving political symbols, not skills",
-  },
-  {
-    domain: "Trafficking & rights abuses",
-    surface: "Exploitation, impunity, lack of prosecution",
-    root: "Networks maintain access to political protection; prosecutors and police have no incentive — or face risks — for accountability",
-  },
-];
+import { coreThesisContent as c } from "@/data/landingContent";
 
 export default function CoreThesis() {
   const ref = useRef<HTMLDivElement>(null);
@@ -48,26 +16,22 @@ export default function CoreThesis() {
 
         <ScrollReveal className="text-center mb-6">
           <span className="text-xs font-medium tracking-widest uppercase text-text-muted block mb-3">
-            The Core Argument
+            {c.eyebrow}
           </span>
         </ScrollReveal>
 
         {/* Big statement */}
         <ScrollReveal delay={0.05} className="text-center mb-8">
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight">
-            Downstream problems are often
+            {c.headlineBefore}
             <br />
-            <span className="italic text-mechanism">sustained by upstream causes.</span>
+            <span className="italic text-mechanism">{c.headlineEmphasis}</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15} className="text-center mb-20">
           <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
-            Poverty, weak services, conflict, environmental destruction, trafficking —
-            these are not random. They are produced and sustained by specific
-            political and institutional arrangements. Understand those arrangements
-            and you understand the problem differently. Intervene in them, and
-            the change is more likely to last.
+            {c.intro}
           </p>
         </ScrollReveal>
 
@@ -75,7 +39,7 @@ export default function CoreThesis() {
         <div className="space-y-3 mb-20">
           <ScrollReveal>
             <div className="grid grid-cols-3 gap-2 pb-2">
-              {["Development problem", "Surface cause", "Upstream political/governance cause"].map((h, i) => (
+              {c.tableHeaders.map((h, i) => (
                 <p key={h} className={`text-[10px] font-medium tracking-widest uppercase px-3 ${i === 2 ? "text-mechanism/70" : "text-text-muted"}`}>
                   {h}
                 </p>
@@ -83,7 +47,7 @@ export default function CoreThesis() {
             </div>
           </ScrollReveal>
 
-          {mechanisms.map((row, i) => (
+          {c.mechanisms.map((row, i) => (
             <motion.div
               key={row.domain}
               initial={{ opacity: 0, y: 14 }}
@@ -107,26 +71,10 @@ export default function CoreThesis() {
         {/* What political science offers */}
         <ScrollReveal className="mb-20">
           <h3 className="font-serif text-2xl md:text-3xl font-bold text-text-primary text-center mb-10">
-            What political science gives us
+            {c.polsciSectionHeadline}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              {
-                concept: "Incentive analysis",
-                body: "Leaders do what they are rewarded for. Political science maps those reward structures — who gives power, who can take it away, and what behavior that produces.",
-                color: "#8CB3F4",
-              },
-              {
-                concept: "Institutional analysis",
-                body: "Rules, formal and informal, shape what is possible. Institutions determine whether a capable person in a broken system can succeed — and whether change outlasts individuals.",
-                color: "#6495ED",
-              },
-              {
-                concept: "Power and settlement analysis",
-                body: "Development outcomes are often the by-products of elite bargains. Understanding who holds power, on what terms, and with what stability, explains much of what sector analysis leaves obscure.",
-                color: "#4372C8",
-              },
-            ].map((item, i) => (
+            {c.polsciConcepts.map((item, i) => (
               <motion.div
                 key={item.concept}
                 initial={{ opacity: 0, y: 20 }}
@@ -149,9 +97,8 @@ export default function CoreThesis() {
           <div className="text-center">
             <div className="w-px h-16 bg-gradient-to-b from-transparent to-gold/50 mx-auto mb-8" />
             <p className="font-serif text-2xl md:text-3xl text-text-primary italic leading-relaxed max-w-3xl mx-auto">
-              To understand development, you have to understand politics.
-              Not as background noise — as a{" "}
-              <span className="text-mechanism not-italic font-bold">causal mechanism.</span>
+              {c.finalThesisBefore}{" "}
+              <span className="text-mechanism not-italic font-bold">{c.finalThesisEmphasis}</span>
             </p>
             <div className="w-px h-16 bg-gradient-to-b from-gold/50 to-transparent mx-auto mt-8" />
           </div>

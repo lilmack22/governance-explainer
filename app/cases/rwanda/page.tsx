@@ -22,7 +22,7 @@ const CountryMap = dynamic(() => import("@/components/case/CountryMap"), {
 const CausalDiagram = dynamic(() => import("@/components/case/CausalDiagram"), {
   ssr: false,
   loading: () => (
-    <div className="w-full rounded-xl bg-ink-900 border border-border/40 animate-pulse" style={{ height: 580 }} />
+    <div className="w-full rounded-xl bg-ink-900 border border-border/40 animate-pulse" style={{ height: 1140 }} />
   ),
 });
 
@@ -39,44 +39,30 @@ export default function RwandaPage() {
       {/* ── Hero ──────────────────────────────────────────── */}
       <CaseHero caseStudy={rwanda} />
 
-      {/* ── Map + Timeline ────────────────────────────────── */}
+      {/* ── Map + Indicators ──────────────────────────────── */}
       <section className="px-6 py-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Map */}
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 items-start">
           <ScrollReveal direction="left">
-            <div>
-              <SectionLabel>Location</SectionLabel>
-              <CountryMap
-                coordinates={rwanda.coordinates}
-                country={rwanda.country}
-              />
-              <p className="text-xs text-text-muted mt-3 leading-relaxed">
-                Rwanda sits at the heart of the Great Lakes region, bordered by
-                DRC, Uganda, Tanzania, and Burundi — a historically volatile
-                neighbourhood.
-              </p>
-            </div>
+            <SectionLabel>Location</SectionLabel>
+            <CountryMap
+              coordinates={rwanda.coordinates}
+              country={rwanda.country}
+            />
+            <p className="text-xs text-text-muted mt-3 leading-relaxed">
+              Rwanda sits at the heart of the Great Lakes region, bordered by
+              DRC, Uganda, Tanzania, and Burundi — a historically volatile
+              neighbourhood.
+            </p>
           </ScrollReveal>
 
-          {/* Timeline */}
           <ScrollReveal direction="right">
-            <div>
-              <SectionLabel>Timeline of transformation</SectionLabel>
-              <CaseTimeline events={rwanda.timeline} />
-            </div>
+            <SectionLabel>Key indicators</SectionLabel>
+            <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
+              The transformation in numbers
+            </h2>
+            <CaseIndicators indicators={rwanda.indicators} />
           </ScrollReveal>
         </div>
-      </section>
-
-      {/* ── Indicators ────────────────────────────────────── */}
-      <section className="px-6 py-12 max-w-7xl mx-auto">
-        <ScrollReveal>
-          <SectionLabel>Key indicators</SectionLabel>
-          <h2 className="font-serif text-2xl font-bold text-text-primary mb-8">
-            The transformation in numbers
-          </h2>
-        </ScrollReveal>
-        <CaseIndicators indicators={rwanda.indicators} />
       </section>
 
       {/* ── Causal Question ───────────────────────────────── */}
@@ -89,7 +75,7 @@ export default function RwandaPage() {
         />
       </div>
 
-      {/* ── Causal Diagram ────────────────────────────────── */}
+      {/* ── Causal Diagram + Timeline ─────────────────────── */}
       <AnimatePresence>
         {diagramRevealed && (
           <motion.section
@@ -113,12 +99,19 @@ export default function RwandaPage() {
               </p>
             </ScrollReveal>
 
-            <CausalDiagram
-              causalNodes={rwanda.causalNodes}
-              causalEdges={rwanda.causalEdges}
-              onConceptSelect={handleConceptSelect}
-              selectedConceptId={selectedConceptId}
-            />
+            <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 items-start">
+              <div>
+                <SectionLabel>Timeline of transformation</SectionLabel>
+                <CaseTimeline events={rwanda.timeline} />
+              </div>
+              <CausalDiagram
+                causalNodes={rwanda.causalNodes}
+                causalEdges={rwanda.causalEdges}
+                onConceptSelect={handleConceptSelect}
+                selectedConceptId={selectedConceptId}
+                vertical
+              />
+            </div>
           </motion.section>
         )}
       </AnimatePresence>
@@ -158,6 +151,51 @@ export default function RwandaPage() {
             ))}
           </div>
         </motion.section>
+      )}
+
+      {/* ── Costs & Shortcomings ──────────────────────────── */}
+      {rwanda.costs && rwanda.costs.length > 0 && (
+        <section className="px-6 py-16 max-w-7xl mx-auto">
+          <ScrollReveal>
+            <div className="flex items-start gap-4 mb-8">
+              <div className="shrink-0 mt-1 w-1 self-stretch rounded-full bg-red-500/40" />
+              <div>
+                <SectionLabel>Costs and shortcomings</SectionLabel>
+                <h2 className="font-serif text-2xl font-bold text-text-primary mb-2">
+                  What this transformation does not include
+                </h2>
+                <p className="text-sm text-text-secondary max-w-2xl leading-relaxed">
+                  Rwanda is a strong case study in development and state capacity. It is not a case
+                  study in democratization. The gains documented above coexist with serious and
+                  well-documented political costs.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {rwanda.costs.map((c, i) => (
+              <ScrollReveal key={c.id} delay={0.08 * i}>
+                <div className="p-6 rounded-xl border border-red-500/20 bg-red-500/[0.03] hover:border-red-500/35 transition-all h-full">
+                  <div className="flex items-start gap-3 mb-3">
+                    <span
+                      className="font-serif text-3xl font-bold leading-none shrink-0"
+                      style={{ color: "rgba(239,68,68,0.2)" }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-serif font-semibold text-red-400/80 leading-tight mt-1">
+                      {c.heading}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-text-secondary leading-relaxed pl-10">
+                    {c.body}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
       )}
 
       {/* ── Concept Panel overlay ─────────────────────────── */}

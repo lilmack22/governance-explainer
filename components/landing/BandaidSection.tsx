@@ -3,42 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-const downstream = [
-  {
-    symptom: "Clinics without medicine or accountable staff",
-    cause: "Health worker incentives not aligned with delivery; no political accountability for outcomes",
-  },
-  {
-    symptom: "Schools where teachers don't show up",
-    cause: "Teacher attendance monitored by no one with power to act; local elite capture of payroll",
-  },
-  {
-    symptom: "Anti-poverty programs captured by local leaders",
-    cause: "Patronage systems route benefits to allies; beneficiary lists are political tools",
-  },
-  {
-    symptom: "Anti-deforestation rules without enforcement",
-    cause: "Timber rents benefit powerful actors who control enforcement institutions",
-  },
-  {
-    symptom: "Anti-trafficking laws with no prosecutions",
-    cause: "Trafficking networks pay or coerce police and prosecutors; impunity is structural",
-  },
-  {
-    symptom: "Police reform that doesn't change behavior",
-    cause: "Political control of coercive actors remains unchanged; reform is cosmetic",
-  },
-];
-
-const upstream = [
-  { icon: "🎯", label: "What incentives does the leader face?", sub: "Accountability to citizens, or to a narrow coalition?" },
-  { icon: "🏛️", label: "Who holds power, and on what terms?", sub: "The political settlement — who wins, who is bought off, who is excluded" },
-  { icon: "⚙️", label: "Can the state actually implement policy?", sub: "State capacity: bureaucracy, finances, reach, competence" },
-  { icon: "🔗", label: "What informal rules govern behavior?", sub: "Patronage networks, coercion, customary norms that override formal law" },
-  { icon: "💰", label: "Who profits from the status quo?", sub: "Rents from land, resources, illicit flows — and how they shape politics" },
-  { icon: "⚖️", label: "Is violence politically useful?", sub: "Where conflict is a tool for resource extraction or power maintenance" },
-];
+import { bandaidContent as c } from "@/data/landingContent";
 
 export default function BandaidSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -52,17 +17,15 @@ export default function BandaidSection() {
         {/* Section intro */}
         <ScrollReveal className="mb-20 text-center">
           <span className="text-xs font-medium tracking-widest uppercase text-text-muted block mb-3">
-            Symptom vs. System
+            {c.eyebrow}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-5 leading-tight">
-            The problem isn't that we're ignorant.
+            {c.headlineBefore}
             <br />
-            <span className="italic text-mechanism">The problem is where we look.</span>
+            <span className="italic text-mechanism">{c.headlineEmphasis}</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
-            Most development failures have two faces. One is visible — the broken clinic,
-            the absent teacher, the empty legal promise. The other is hidden upstream:
-            the incentive, the institution, the power arrangement sustaining the failure.
+            {c.intro}
           </p>
         </ScrollReveal>
 
@@ -72,18 +35,18 @@ export default function BandaidSection() {
             <div className="grid grid-cols-2 gap-2">
               <div className="text-center pb-3">
                 <span className="text-[10px] font-medium tracking-widest uppercase text-text-muted">
-                  What we see
+                  {c.tableHeaders.left}
                 </span>
               </div>
               <div className="text-center pb-3">
                 <span className="text-[10px] font-medium tracking-widest uppercase text-mechanism/70">
-                  What sustains it
+                  {c.tableHeaders.right}
                 </span>
               </div>
             </div>
           </ScrollReveal>
 
-          {downstream.map((row, i) => (
+          {c.downstream.map((row, i) => (
             <motion.div
               key={row.symptom}
               initial={{ opacity: 0, y: 16 }}
@@ -108,16 +71,15 @@ export default function BandaidSection() {
         {/* The upstream layer */}
         <ScrollReveal className="mb-10 text-center">
           <h3 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mb-4">
-            The upstream layer asks different questions.
+            {c.upstreamHeadline}
           </h3>
           <p className="text-text-secondary max-w-xl mx-auto">
-            Not "why is the clinic broken?" but "what political arrangement
-            makes a functioning clinic impossible?"
+            {c.upstreamSubhead}
           </p>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-20">
-          {upstream.map((item, i) => (
+          {c.upstream.map((item, i) => (
             <ScrollReveal key={item.label} delay={0.06 * i}>
               <div className="p-5 rounded-xl border border-mechanism/20 bg-gradient-to-br from-gold/5 to-transparent h-full">
                 <span className="text-2xl block mb-3">{item.icon}</span>
@@ -131,12 +93,9 @@ export default function BandaidSection() {
         {/* Pull quote */}
         <ScrollReveal>
           <div className="relative border border-mechanism/20 rounded-2xl p-8 md:p-12 bg-gradient-to-br from-gold/4 to-transparent text-center">
-            <span className="absolute -top-5 left-1/2 -translate-x-1/2 px-4 bg-ink-950 text-mechanism/30 text-6xl font-serif leading-none">"</span>
+            <span className="absolute -top-5 left-1/2 -translate-x-1/2 px-4 bg-ink-950 text-mechanism/30 text-6xl font-serif leading-none">&ldquo;</span>
             <p className="font-serif text-xl md:text-2xl text-text-primary italic leading-snug max-w-3xl mx-auto">
-              Political science matters for development work because many outcomes
-              that look like sector problems are actually governance problems.
-              Governance structures whether policy is implemented, who benefits,
-              whether violence is contained, and whether development gains last.
+              {c.pullQuote}
             </p>
           </div>
         </ScrollReveal>

@@ -3,84 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-const levels = [
-  {
-    number: "01",
-    label: "Point-of-use fixes",
-    color: "#94a3b8",
-    dimColor: "rgba(148,163,184,0.08)",
-    border: "rgba(148,163,184,0.25)",
-    description: "Solve the immediate problem at the moment of use.",
-    intuition: "Fixing the water at the cup — not the pipes, the governance, or the financing system.",
-    examples: [
-      { name: "LifeStraw / chlorine tablets", org: "PSI, Pure Water for the World", note: "Filters contaminated water at household level" },
-      { name: "Solar lanterns", org: "d.light, M-KOPA", note: "Off-grid light where there is no grid electricity" },
-      { name: "Clean cookstoves", org: "Envirofit, Clean Cooking Alliance", note: "Reduce indoor smoke exposure at point of cooking" },
-    ],
-    unchanged: "Public infrastructure, state capacity for water/energy provision, political economy of service delivery",
-  },
-  {
-    number: "02",
-    label: "Direct goods transfers",
-    color: "#94a3b8",
-    dimColor: "rgba(148,163,184,0.08)",
-    border: "rgba(148,163,184,0.25)",
-    description: "Fill resource gaps by giving people what they lack.",
-    intuition: "You're filling the gap — not asking why the gap exists.",
-    examples: [
-      { name: "Shoes & glasses", org: "TOMS, Warby Parker", note: "Give a pair, give a pair — good intentions, no systemic change" },
-      { name: "Food aid", org: "WFP emergency operations", note: "Lifesaving in crisis; often creates import dependency" },
-      { name: "Cash transfers", org: "GiveDirectly, conditional transfer programs", note: "Effective but bounded by structural labor market conditions" },
-    ],
-    unchanged: "Why the income gap exists; labor markets; industrial structure; political barriers to economic participation",
-  },
-  {
-    number: "03",
-    label: "Targeted disease programs",
-    color: "#94a3b8",
-    dimColor: "rgba(148,163,184,0.08)",
-    border: "rgba(148,163,184,0.25)",
-    description: "Attack specific diseases with effective tools at scale.",
-    intuition: "Fighting the disease — not rebuilding the system that fails to prevent it.",
-    examples: [
-      { name: "Vaccination campaigns", org: "Gavi, the Vaccine Alliance", note: "Highly effective at specific diseases; parallel to national systems" },
-      { name: "Bed nets", org: "Against Malaria Foundation", note: "Proven, cost-effective — but malaria persists where governance fails" },
-      { name: "HIV/AIDS treatment", org: "The Global Fund, PEPFAR", note: "Life-saving; but relies on sustained external funding, not local system capacity" },
-    ],
-    unchanged: "Health system governance; public financing capacity; political accountability in health delivery; prevention infrastructure",
-  },
-  {
-    number: "04",
-    label: "NGO service delivery",
-    color: "#94a3b8",
-    dimColor: "rgba(148,163,184,0.08)",
-    border: "rgba(148,163,184,0.25)",
-    description: "Directly deliver services where the state cannot or does not.",
-    intuition: "Acting as the state — not changing how the state works.",
-    examples: [
-      { name: "Community health & clinics", org: "Partners In Health", note: "Brilliant model — but builds a parallel system, not state capacity" },
-      { name: "Multi-sector development", org: "BRAC", note: "Extraordinary at scale; has changed what's possible — but works where state is absent" },
-      { name: "School networks", org: "Bridge International, various NGOs", note: "Fills education gaps — but government adoption remains the open question" },
-    ],
-    unchanged: "State incentives to deliver; political accountability; domestic financing; what happens when the NGO leaves",
-  },
-  {
-    number: "05",
-    label: "What's actually upstream",
-    color: "#6495ED",
-    dimColor: "rgba(212,168,67,0.07)",
-    border: "rgba(212,168,67,0.40)",
-    description: "The political and institutional conditions that determine whether anything else works — or lasts.",
-    intuition: "This is where the river bends. This is where someone is pushing.",
-    examples: [
-      { name: "Who holds power and on what terms", org: "Political settlement", note: "Elite incentives determine whether any policy gets implemented" },
-      { name: "Whether the state can actually implement", org: "State capacity", note: "Without capable institutions, good policies remain paper" },
-      { name: "Whether leaders are accountable to citizens", org: "Accountability and representation", note: "Accountable governments aggregate needs and deliver at scale" },
-    ],
-    unchanged: null,
-  },
-];
+import { interventionLadderContent as c } from "@/data/landingContent";
 
 export default function InterventionLadder() {
   const ref = useRef<HTMLDivElement>(null);
@@ -94,25 +17,22 @@ export default function InterventionLadder() {
       <div className="max-w-4xl mx-auto">
         <ScrollReveal className="mb-6 text-center">
           <span className="text-xs font-medium tracking-widest uppercase text-text-muted block mb-3">
-            A Taxonomy of Intervention
+            {c.eyebrow}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-5">
-            Much of this is good work.
+            {c.headlineBefore}
             <br />
-            <span className="italic text-text-secondary">None of it is upstream.</span>
+            <span className="italic text-text-secondary">{c.headlineEmphasis}</span>
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1} className="mb-16 text-center">
           <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
-            From water filters to NGO clinics, the development sector has built
-            an extraordinary range of interventions. They can be lifesaving.
-            But all too often, they intervene at the level where problems
-            are <em>experienced</em>, not where they are <em>generated</em>.
+            {c.intro}
           </p>
         </ScrollReveal>
 
         <div className="space-y-3">
-          {levels.map((level, i) => {
+          {c.levels.map((level, i) => {
             const isUpstream = i === 4;
             const isOpen = expanded === i;
 
@@ -180,7 +100,7 @@ export default function InterventionLadder() {
                           className="text-sm italic mb-5"
                           style={{ color: level.color }}
                         >
-                          "{level.intuition}"
+                          &ldquo;{level.intuition}&rdquo;
                         </p>
 
                         {/* Examples */}
@@ -211,7 +131,7 @@ export default function InterventionLadder() {
                         {level.unchanged && (
                           <div className="rounded-lg px-4 py-3 bg-ink-950/60 border border-border/20">
                             <p className="text-[10px] font-medium text-text-muted tracking-widest uppercase mb-1">
-                              What it doesn't change
+                              What it doesn&apos;t change
                             </p>
                             <p className="text-xs text-text-secondary leading-relaxed">
                               {level.unchanged}
@@ -230,7 +150,7 @@ export default function InterventionLadder() {
         {/* Connector line to next section */}
         <ScrollReveal delay={0.4} className="mt-16 text-center">
           <p className="font-serif text-2xl text-text-secondary italic max-w-2xl mx-auto">
-            "An intervention can work without the system working."
+            &ldquo;{c.connectorQuote}&rdquo;
           </p>
           <div className="mt-6 w-px h-14 bg-gradient-to-b from-gold/40 to-transparent mx-auto" />
         </ScrollReveal>

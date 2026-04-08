@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { heroContent as c } from "@/data/landingContent";
 
 export default function Hero() {
   return (
@@ -18,7 +18,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/60 bg-surface text-text-muted text-xs font-medium tracking-widest uppercase mb-10"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-mechanism opacity-70" />
-          Introduction
+          {c.eyebrow}
         </motion.div>
 
         {/* Parable opener */}
@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="text-text-muted text-base italic mb-6 tracking-wide"
         >
-          There is an old public health parable where...
+          {c.parableOpener}
         </motion.p>
 
         {/* Parable body */}
@@ -38,9 +38,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-2xl md:text-3xl text-text-primary leading-relaxed mb-10 max-w-3xl mx-auto"
         >
-          You are standing by a river. People are floating past, struggling.
-          You jump in. You pull them out. Then more come.{" "}
-          <span className="italic text-text-secondary">More and more.</span>
+          {c.parableBody1}{" "}
+          <span className="italic text-text-secondary">{c.parableBody1Emphasis}</span>
         </motion.div>
 
         <motion.div
@@ -49,8 +48,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.65 }}
           className="font-serif text-2xl md:text-3xl text-text-primary leading-relaxed mb-10 max-w-3xl mx-auto"
         >
-          Then someone stops — and starts running{" "}
-          <span className="text-mechanism italic">upstream.</span>
+          {c.parableBody2Before}{" "}
+          <span className="text-mechanism italic">{c.parableBody2Emphasis}</span>
         </motion.div>
 
         <motion.div
@@ -59,9 +58,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.9 }}
           className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed mb-14 max-w-2xl mx-auto text-center"
         >
-          Others shout, &ldquo;Where are you going? We need help here!&rdquo;
+          {c.parableDialogue}
           <br /><br />
-          <span className="text-mechanism not-italic font-medium">They say, &ldquo;I&apos;m going to find out who is pushing people into the river.&rdquo;</span>
+          <span className="text-mechanism not-italic font-medium">{c.parableResponse}</span>
         </motion.div>
 
         {/* Scroll transition */}
@@ -89,12 +88,10 @@ export default function Hero() {
           className="space-y-5 mb-14"
         >
           <p className="font-sans text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
-            Much of what we call "development" happens at the riverbank. Especially in the nonprofit sector, problems are often tackled downstream, close to where they manifest visibly.
-            Organizations provide school supplies, deliver vaccines, build
-            clinics, give loans. These things matter — they save lives.
+            {c.argument1}
           </p>
           <p className="font-serif text-2xl md:text-3xl text-text-primary font-semibold leading-relaxed max-w-2xl mx-auto">
-            But they do not change who is upstream, or why they keep pushing people into a perilous fate.
+            {c.argument2}
           </p>
         </motion.div>
 
@@ -105,9 +102,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.3, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-4xl md:text-6xl font-bold text-text-primary leading-[1.1] tracking-tight mb-6"
         >
-          When we keep going upstream, we see that
+          {c.thesisBefore}
           <br />
-          <span className="italic text-mechanism">most development problems have political roots.</span>
+          <span className="italic text-mechanism">{c.thesisEmphasis}</span>
         </motion.h1>
 
         <motion.p
@@ -116,8 +113,7 @@ export default function Hero() {
           transition={{ delay: 1.6, duration: 0.7 }}
           className="text-text-secondary text-base max-w-xl mx-auto mb-12 leading-relaxed"
         >
-          This is an argument for going upstream — for understanding incentives,
-          institutions, power, and governance as causes, not just context.
+          {c.subheading}
         </motion.p>
 
         {/* Scroll nudge */}
@@ -128,7 +124,7 @@ export default function Hero() {
           className="flex flex-col items-center gap-2"
         >
           <span className="text-xs text-text-muted tracking-widest uppercase">
-            The argument
+            {c.scrollNudge}
           </span>
           <motion.div
             animate={{ y: [0, 7, 0] }}

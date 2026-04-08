@@ -10,6 +10,7 @@ export interface CausalNode {
   conceptId: string;
   description: string;
   position: { x: number; y: number };
+  year?: string;
 }
 
 export interface CausalEdge {
@@ -63,6 +64,12 @@ export interface OperationalTakeaway {
   body: string;
 }
 
+export interface CostItem {
+  id: string;
+  heading: string;
+  body: string;
+}
+
 export interface CaseStudy {
   id: string;
   slug: string;
@@ -81,5 +88,6 @@ export interface CaseStudy {
   causalNodes: CausalNode[];
   causalEdges: CausalEdge[];
   operationalTakeaways: OperationalTakeaway[];
+  costs?: CostItem[];
   status: "live" | "coming-soon";
 }

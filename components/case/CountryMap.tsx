@@ -15,6 +15,14 @@ const FOCUS_COUNTRIES: Record<string, { label: string }> = {
   "180": { label: "DRC" },
 };
 
+// Label anchor coordinates for each neighbor (placed at visible centroid within the map)
+const NEIGHBOR_LABELS: { label: string; coordinates: [number, number] }[] = [
+  { label: "Uganda",   coordinates: [31.2,  0.8]  },
+  { label: "DRC",      coordinates: [27.2, -1.5]  },
+  { label: "Tanzania", coordinates: [31.8, -4.2]  },
+  { label: "Burundi",  coordinates: [29.7, -3.7]  },
+];
+
 interface Props {
   coordinates: [number, number];
   country: string;
@@ -64,27 +72,50 @@ export default function CountryMap({ coordinates, country }: Props) {
                     geography={geo}
                     style={{
                       default: {
-                        fill: isRwanda ? "#6495ED" : "#132035",
-                        stroke: "#0d1e35",
-                        strokeWidth: isRwanda ? 1.5 : 0.8,
+                        fill: isRwanda ? "#6495ED" : "#132a45",
+                        stroke: isRwanda ? "#4a7acc" : "#3a6a9a",
+                        strokeWidth: isRwanda ? 1.5 : 1.2,
                         filter: isRwanda
                           ? "drop-shadow(0 0 12px rgba(212,168,67,0.6))"
                           : "none",
                         outline: "none",
                       },
                       hover: {
-                        fill: isRwanda ? "#f0c158" : "#1a3050",
-                        stroke: "#0d1e35",
-                        strokeWidth: 1,
+                        fill: isRwanda ? "#f0c158" : "#1a3a5a",
+                        stroke: isRwanda ? "#4a7acc" : "#3a6a9a",
+                        strokeWidth: isRwanda ? 1.5 : 1.2,
                         outline: "none",
                       },
-                      pressed: { fill: isRwanda ? "#f0c158" : "#1a3050", outline: "none" },
+                      pressed: { fill: isRwanda ? "#f0c158" : "#1a3a5a", outline: "none" },
                     }}
                   />
                 );
               })
             }
           </Geographies>
+
+          {/* Neighbor country labels */}
+          {NEIGHBOR_LABELS.map(({ label, coordinates }) => (
+            <Marker key={label} coordinates={coordinates}>
+              <motion.text
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9 }}
+                textAnchor="middle"
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: 9,
+                  fill: "#64748b",
+                  fontWeight: 500,
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                  pointerEvents: "none",
+                }}
+              >
+                {label}
+              </motion.text>
+            </Marker>
+          ))}
 
           {/* Kigali marker */}
           <Marker coordinates={[30.06, -1.94]}>

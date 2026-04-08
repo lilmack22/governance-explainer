@@ -26,6 +26,7 @@ interface Props {
   causalEdges: CausalEdge[];
   onConceptSelect: (conceptId: string) => void;
   selectedConceptId: string | null;
+  vertical?: boolean;
 }
 
 export default function CausalDiagram({
@@ -33,6 +34,7 @@ export default function CausalDiagram({
   causalEdges,
   onConceptSelect,
   selectedConceptId,
+  vertical = false,
 }: Props) {
   const flowNodes: Node<ConceptNodeData>[] = useMemo(
     () =>
@@ -46,6 +48,8 @@ export default function CausalDiagram({
           description: n.description,
           conceptId: n.conceptId,
           animationDelay: i * 0.06,
+          vertical,
+          year: n.year,
         },
         selected: selectedConceptId === n.conceptId,
       })),
@@ -67,7 +71,7 @@ export default function CausalDiagram({
           id: e.id,
           source: e.source,
           target: e.target,
-          type: "smoothstep",
+          type: "default",
           animated: !isCritique,
           style: {
             stroke: edgeColor,
@@ -103,7 +107,7 @@ export default function CausalDiagram({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="w-full rounded-xl overflow-hidden border border-border/50"
-      style={{ height: 580 }}
+      style={{ height: vertical ? 1140 : 580 }}
     >
       <ReactFlow
         nodes={nodes}
@@ -112,8 +116,19 @@ export default function CausalDiagram({
         onEdgesChange={onEdgesChange}
         onNodeClick={onNodeClick}
         nodeTypes={nodeTypes}
-        fitView
-        fitViewOptions={{ padding: 0.15 }}
+        {...(vertical
+          ? {
+              fitView: false,
+              defaultViewport: { x: 50, y: 20, zoom: 1 },
+              panOnDrag: false,
+              zoomOnScroll: false,
+              zoomOnPinch: false,
+              preventScrolling: false,
+            }
+          : {
+              fitView: true,
+              fitViewOptions: { padding: 0.15 },
+            })}
         minZoom={0.5}
         maxZoom={2}
         proOptions={{ hideAttribution: true }}
@@ -125,13 +140,15 @@ export default function CausalDiagram({
           size={1}
           color="rgba(255,255,255,0.04)"
         />
-        <Controls
-          style={{
-            background: "#0d1526",
-            border: "1px solid #1e2d45",
-            borderRadius: 8,
-          }}
-        />
+        {!vertical && (
+          <Controls
+            style={{
+              background: "#0d1526",
+              border: "1px solid #1e2d45",
+              borderRadius: 8,
+            }}
+          />
+        )}
       </ReactFlow>
 
       {/* Legend */}
