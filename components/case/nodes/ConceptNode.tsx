@@ -8,6 +8,7 @@ import type { NodeType } from "@/data/types";
 
 export interface ConceptNodeData {
   label: string;
+  shortLabel?: string;
   nodeType: NodeType;
   description: string;
   selected?: boolean;
@@ -87,15 +88,11 @@ const ConceptNode = memo(function ConceptNode({
           {data.label}
         </p>
 
-        {/* Description (show when selected) */}
-        {selected && (
-          <motion.p
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            className="text-[10px] text-text-secondary mt-2 leading-relaxed"
-          >
-            {data.description}
-          </motion.p>
+        {/* Short description */}
+        {data.shortLabel && (
+          <p className="text-[10px] text-text-secondary mt-1 leading-snug opacity-80">
+            {data.shortLabel as string}
+          </p>
         )}
       </div>
 

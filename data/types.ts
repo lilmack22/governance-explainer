@@ -25,6 +25,45 @@ export interface Scholar {
   name: string;
   work?: string;
   year?: number;
+  textSlug?: string;  // links to /theory/texts/[slug]
+}
+
+export interface TextAuthor {
+  name: string;
+  title: string;           // academic position / affiliation
+  institution: string;
+  bio: string;             // 2–3 sentence intellectual bio
+  photoAlt?: string;
+}
+
+export interface CoreArgument {
+  heading: string;
+  body: string;
+}
+
+export interface KeyConceptEntry {
+  name: string;
+  definition: string;
+}
+
+export interface CaseExample {
+  country: string;
+  description: string;
+}
+
+export interface TextEntry {
+  slug: string;
+  title: string;
+  shortTitle: string;
+  authors: TextAuthor[];
+  year: number;
+  publisher: string;
+  coverImage?: string;     // path relative to /public, e.g. /book-covers/foo.jpg
+  overview: string;        // 2–3 paragraph summary
+  coreArguments: CoreArgument[];
+  keyConcepts: KeyConceptEntry[];
+  casesAndExamples: CaseExample[];
+  paradigms: string[];     // e.g. ["Selectorate Theory", "Political Economy"]
 }
 
 export interface ConceptDrillDown {

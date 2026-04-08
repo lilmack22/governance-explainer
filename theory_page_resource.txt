@@ -1,0 +1,89 @@
+WHAT CAUSES DEVELOPMENT?
+“When political leaders expect to stay in power, they invest in long-term growth.”
+→ Known as stationary bandit logic; associated with Mancur Olson. Rulers with long time horizons provide public goods and protect property.
+“Economic growth is more likely when elites cannot easily extract wealth from others.”
+→ Inclusive vs. extractive institutions framework; Daron Acemoglu & James A. Robinson.
+“States that can tax, administer, and enforce rules are more capable of generating development.”
+→ State capacity theory; Francis Fukuyama and historical institutionalists.
+“Development happens when economies shift from low-productivity sectors (like subsistence agriculture) to higher-productivity ones.”
+→ Structural transformation; Arthur Lewis dual-sector model.
+“Countries grow when they solve the most binding constraint rather than trying to fix everything at once.”
+→ Growth diagnostics; Dani Rodrik.
+“Access to education, health, and basic capabilities expands people’s ability to participate in the economy.”
+→ Capability approach; Amartya Sen.
+“Strong coordination between the state and firms can accelerate industrialization.”
+→ Developmental state model (East Asia).
+“Natural resource wealth can weaken incentives to build productive institutions.”
+→ Resource curse literature.
+WHAT CAUSES DEMOCRATIZATION?
+STRUCTURAL + LONG-RUN
+“As living standards rise, people demand more political participation.”
+→ Modernization theory; Seymour Martin Lipset.
+“When inequality is high, elites resist democracy because they fear redistribution.”
+→ Redistribution models; Acemoglu & Robinson.
+ELITES, STRATEGY, AND REGIME DYNAMICS
+“Leaders stay in power by rewarding just enough supporters to survive.”
+→ Selectorate theory; Bruce Bueno de Mesquita. Focus on winning coalition size.
+“When elites split into factions, openings for democratization emerge.”
+→ Softliners vs. hardliners in authoritarian regimes; Guillermo O'Donnell & Philippe Schmitter.
+“Democracy often emerges from negotiated bargains rather than mass overthrow.”
+→ Pacted transitions; Southern Europe / Latin America transitions literature.
+“Rulers may allow elections not to lose power, but to better manage elites and opposition.”
+→ Electoral authoritarianism; Andreas Schedler.
+“Some regimes maintain the appearance of democracy while systematically undermining competition.”
+→ Competitive authoritarianism; Steven Levitsky & Lucan Way.
+MASS POLITICS
+“Organized groups (labor, civil society) can force elites to expand political rights.”
+→ Social movement and labor-based democratization theories; Charles Tilly.
+“Access to information makes it easier for citizens to hold leaders accountable.”
+→ Media/accountability models.
+SEQUENCING & STATE BUILDING
+“Effective states usually emerge before stable democracies.”
+→ State-first argument; Samuel P. Huntington and Francis Fukuyama.
+CLIENTELISM & DISTRIBUTION
+“Politicians maintain support by distributing targeted benefits rather than broad public goods.”
+→ Clientelism; Susan C. Stokes and others.
+“When voters depend on targeted benefits, programmatic politics and accountability are weaker.”
+→ Clientelism vs. programmatic competition literature.
+WHAT REDUCES CONFLICT & VIOLENCE?
+STATE & GOVERNANCE
+“Violence declines when the state can monopolize coercion and enforce rules.”
+→ State capacity / Weberian state logic.
+“People are less likely to support violence when they view the state as legitimate.”
+→ Legitimacy frameworks (incl. ALC-type thinking).
+ELITES & COMMITMENT PROBLEMS
+“Conflicts persist when groups cannot credibly commit to future peace.”
+→ Commitment problem; James Fearon.
+“Power-sharing can reduce violence by reassuring losing groups.”
+→ Power-sharing literature.
+“Violence declines when elites reach stable political settlements over power and resources.”
+→ Political settlements framework.
+ECONOMIC INCENTIVES
+“People are less likely to join armed groups when they have better economic alternatives.”
+→ Opportunity cost models; Paul Collier.
+“Conflict is more likely when groups face systematic economic or political inequalities.”
+→ Horizontal inequalities; Frances Stewart.
+NON-STATE ACTORS & HYBRID GOVERNANCE
+“Governments sometimes tolerate or even rely on non-state actors to provide governance in areas they cannot or prefer not to control.”
+→ Rebel governance / hybrid governance literature; Stathis Kalyvas, Ana Arjona.
+“Non-state armed groups can reduce violence locally when they establish predictable rules and governance.”
+→ Rebel governance / order-making in civil war.
+“States may strategically outsource coercion or governance to militias to maintain plausible deniability.”
+→ Paramilitarism / indirect rule literature.
+MICRO-LEVEL DYNAMICS
+“Civilians collaborate with armed actors when it increases their security relative to alternatives.”
+→ Civil war microfoundations; Kalyvas.
+“Selective, targeted violence is more effective for control than indiscriminate violence.”
+→ Violence logic in civil war.
+INTERNATIONAL & PEACEBUILDING
+“External actors can reduce violence by monitoring and enforcing peace agreements.”
+→ Peacekeeping effectiveness; United Nations.
+“Disarming and reintegrating fighters reduces the risk of renewed violence.”
+→ DDR frameworks.
+CROSS-CUTTING 
+“Political outcomes depend on how incentives are structured for key actors.”
+→ Political economy / rationalist approaches.
+“Many bad outcomes persist because actors cannot coordinate on better equilibria.”
+→ Coordination failure frameworks.
+“Institutions persist because they benefit powerful groups, even if they are inefficient.”
+→ Historical institutionalism / path dependence.

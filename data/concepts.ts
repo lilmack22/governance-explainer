@@ -113,7 +113,7 @@ const concepts: Record<string, ConceptDrillDown> = {
       "Authoritarian development refers to the empirical phenomenon where autocratic or semi-autocratic regimes achieve rapid economic and social development. It challenges the assumption that democracy is a precondition for development — while also raising fundamental questions about what 'development' means.",
     scholars: [
       { name: "Daron Acemoglu & James Robinson", work: "Economic Origins of Dictatorship and Democracy", year: 2006 },
-      { name: "Bruce Bueno de Mesquita et al.", work: "The Logic of Political Survival", year: 2003 },
+      { name: "Bruce Bueno de Mesquita et al.", work: "The Logic of Political Survival", year: 2003, textSlug: "the-dictators-handbook" },
       { name: "Adam Przeworski et al.", work: "Democracy and Development", year: 2000 },
       { name: "Dan Slater", work: "Ordering Power", year: 2010 },
     ],
@@ -155,6 +155,31 @@ const concepts: Record<string, ConceptDrillDown> = {
     relatedConcepts: ["elite-bargain", "political-settlement", "authoritarian-development"],
     worldBankRelevance:
       "The Bank's Fragility, Conflict, and Violence (FCV) teams increasingly engage with ethnic dimensions of exclusion. Understanding how ethnic composition shapes political settlements helps predict where reforms will face resistance.",
+  },
+  "monopoly-on-violence": {
+    id: "monopoly-on-violence",
+    name: "Monopoly on Violence",
+    tagline: "The state defined by its exclusive claim to legitimate force.",
+    definition:
+      "Max Weber's canonical definition holds that the state is a human community that successfully claims the monopoly of the legitimate use of physical force within a given territory. Without this monopoly — the exclusive right to use or authorize coercive force — property rights are promises without backing, contracts are unenforceable, and governance reduces to whoever can win a fight. State formation is, on this account, fundamentally about establishing and consolidating this monopoly.",
+    scholars: [
+      { name: "Max Weber", work: "Politics as a Vocation", year: 1919 },
+      { name: "Charles Tilly", work: "Coercion, Capital, and European States", year: 1992 },
+      { name: "Jeffrey Herbst", work: "States and Power in Africa", year: 2000 },
+      { name: "Francis Fukuyama", work: "State-Building", year: 2004, textSlug: "state-building" },
+    ],
+    traditions: ["Historical Sociology", "State Theory", "Comparative Politics"],
+    caseApplication:
+      "Post-genocide Rwanda illustrates both the importance and the fragility of the monopoly on violence. The RPF's military victory in 1994 established an unusually clear monopoly in a region where multiple armed groups had previously contested control. That clarity of coercive dominance — combined with a deliberate demobilization of alternative armed actors — is widely credited as the foundation for Rwanda's subsequent governance effectiveness. By contrast, the DRC, Rwanda's neighbor, has never consolidated a monopoly: armed groups persist in the east, the army is predatory, and state authority is confined to urban centers. The contrast illustrates Tilly's argument that the process of consolidating a monopoly on violence — however violent itself — is the precondition for subsequent state development.",
+    critiques: [
+      "The Weberian definition privileges a specific historical path (European state formation) that may not generalize.",
+      "A 'monopoly' on force is always a matter of degree — even strong states tolerate private security, vigilantes, and local militias.",
+      "The legitimacy qualifier is doing enormous work: force without legitimacy is just domination, but legitimacy is socially constructed and contested.",
+      "Tilly's 'war makes states' argument implies that state formation is inherently violent and extractive — a troubling implication for peacebuilding.",
+    ],
+    relatedConcepts: ["state-capacity", "political-settlement", "elite-bargain"],
+    worldBankRelevance:
+      "In fragile and conflict-affected settings, the absence of a credible monopoly on violence is the defining constraint. Security sector reform, DDR, and police professionalization programs are all ultimately attempts to build or consolidate the monopoly — though rarely framed in those terms.",
   },
 };
 

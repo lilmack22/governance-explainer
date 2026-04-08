@@ -19,6 +19,13 @@ const CountryMap = dynamic(() => import("@/components/case/CountryMap"), {
   ),
 });
 
+const RwandaCarousel = dynamic(() => import("@/components/case/RwandaCarousel"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full rounded-xl bg-ink-900 border border-border/40 animate-pulse" style={{ aspectRatio: "16/9" }} />
+  ),
+});
+
 const CausalDiagram = dynamic(() => import("@/components/case/CausalDiagram"), {
   ssr: false,
   loading: () => (
@@ -39,9 +46,9 @@ export default function RwandaPage() {
       {/* ── Hero ──────────────────────────────────────────── */}
       <CaseHero caseStudy={rwanda} />
 
-      {/* ── Map + Indicators ──────────────────────────────── */}
+      {/* ── Map + Carousel ────────────────────────────────── */}
       <section className="px-6 py-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <ScrollReveal direction="left">
             <SectionLabel>Location</SectionLabel>
             <CountryMap
@@ -56,13 +63,21 @@ export default function RwandaPage() {
           </ScrollReveal>
 
           <ScrollReveal direction="right">
-            <SectionLabel>Key indicators</SectionLabel>
-            <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
-              The transformation in numbers
-            </h2>
-            <CaseIndicators indicators={rwanda.indicators} />
+            <SectionLabel>Context &amp; background</SectionLabel>
+            <RwandaCarousel />
           </ScrollReveal>
         </div>
+      </section>
+
+      {/* ── Indicators ────────────────────────────────────── */}
+      <section className="px-6 pb-12 max-w-7xl mx-auto">
+        <ScrollReveal>
+          <SectionLabel>Key indicators</SectionLabel>
+          <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
+            The transformation in numbers
+          </h2>
+          <CaseIndicators indicators={rwanda.indicators} />
+        </ScrollReveal>
       </section>
 
       {/* ── Causal Question ───────────────────────────────── */}
@@ -72,6 +87,9 @@ export default function RwandaPage() {
           causalQuestion={rwanda.causalQuestion}
           onReveal={() => setDiagramRevealed(true)}
           revealed={diagramRevealed}
+          referencedTexts={[
+            { title: "The Dictator's Handbook", slug: "the-dictators-handbook" },
+          ]}
         />
       </div>
 

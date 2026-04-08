@@ -2,15 +2,22 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
+
+interface ReferencedText {
+  title: string;
+  slug: string;
+}
 
 interface Props {
   puzzle: string;
   causalQuestion: string;
   onReveal: () => void;
   revealed: boolean;
+  referencedTexts?: ReferencedText[];
 }
 
-export default function CausalQuestion({ puzzle, causalQuestion, onReveal, revealed }: Props) {
+export default function CausalQuestion({ puzzle, causalQuestion, onReveal, revealed, referencedTexts }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -29,6 +36,20 @@ export default function CausalQuestion({ puzzle, causalQuestion, onReveal, revea
         <p className="font-serif text-xl md:text-2xl text-text-secondary italic leading-relaxed">
           {puzzle}
         </p>
+        {referencedTexts && referencedTexts.length > 0 && (
+          <div className="mt-5 flex items-center justify-center gap-2 flex-wrap">
+            <span className="text-[10px] text-text-muted tracking-widest uppercase">Theoretical basis</span>
+            {referencedTexts.map((t) => (
+              <Link
+                key={t.slug}
+                href={`/theory/texts/${t.slug}`}
+                className="text-[11px] px-3 py-1 rounded-full border border-mechanism/30 text-mechanism hover:bg-mechanism/10 hover:border-mechanism/60 transition-all"
+              >
+                {t.title} →
+              </Link>
+            ))}
+          </div>
+        )}
       </motion.div>
 
       {/* Divider with icon */}

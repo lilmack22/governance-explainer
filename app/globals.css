@@ -104,10 +104,8 @@ h1, h2, h3, h4 {
 .border-mechanism { border-color: var(--color-accent) !important; }
 
 [class*="text-mechanism/"]  { color: var(--color-accent) !important; }
-[class*="bg-mechanism/"]    { background-color: rgba(100,149,237,var(--tw-bg-opacity,1)) !important; }
 [class*="border-mechanism/"]{ border-color: var(--color-accent) !important; }
 
 [class*="text-gold/"]   { color: var(--color-accent) !important; }
-[class*="bg-gold/"]     { background-color: rgba(100,149,237,var(--tw-bg-opacity,1)) !important; }
 [class*="border-gold/"] { border-color: var(--color-accent) !important; }
 

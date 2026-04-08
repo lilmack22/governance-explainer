@@ -43,7 +43,8 @@ export default function CausalDiagram({
         type: "conceptNode",
         position: n.position,
         data: {
-          label: n.shortLabel ?? n.label,
+          label: n.label,
+          shortLabel: n.shortLabel,
           nodeType: n.nodeType,
           description: n.description,
           conceptId: n.conceptId,

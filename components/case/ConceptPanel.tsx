@@ -87,10 +87,20 @@ export default function ConceptPanel({ conceptId, onClose }: Props) {
                     >
                       <p className="text-sm font-semibold text-text-primary">{s.name}</p>
                       {s.work && (
-                        <p className="text-xs text-text-muted mt-0.5 italic">
-                          {s.work}
-                          {s.year ? ` (${s.year})` : ""}
-                        </p>
+                        s.textSlug ? (
+                          <Link
+                            href={`/theory/texts/${s.textSlug}`}
+                            className="text-xs text-mechanism/80 hover:text-mechanism mt-0.5 italic underline underline-offset-2 decoration-mechanism/30 hover:decoration-mechanism transition-colors block"
+                          >
+                            {s.work}
+                            {s.year ? ` (${s.year})` : ""}
+                          </Link>
+                        ) : (
+                          <p className="text-xs text-text-muted mt-0.5 italic">
+                            {s.work}
+                            {s.year ? ` (${s.year})` : ""}
+                          </p>
+                        )
                       )}
                     </div>
                   ))}

@@ -55,7 +55,7 @@ const cases: Case[] = [
     region: "Southern Africa",
     headline: "Avoiding the resource curse through elite cohesion",
     question: "Why did Botswana succeed where others failed?",
-    status: "coming-soon",
+    status: "live",
     dev: true, dem: false, conflict: true,
   },
   {
@@ -125,7 +125,7 @@ const cases: Case[] = [
     region: "South America",
     headline: "Insurgency, coca, and a half-century path to negotiated peace",
     question: "How did Colombia move toward ending one of the world's longest-running conflicts?",
-    status: "coming-soon",
+    status: "live",
     dev: true, dem: true, conflict: true,
   },
   {
@@ -206,7 +206,7 @@ const cases: Case[] = [
     region: "West Africa",
     headline: "RUF atrocities and the path to post-war stabilization",
     question: "How did international intervention help end one of the world's most brutal conflicts?",
-    status: "coming-soon",
+    status: "live",
     dev: false, dem: true, conflict: true,
   },
   {
@@ -216,7 +216,7 @@ const cases: Case[] = [
     region: "South Asia",
     headline: "Maoist insurgency to federal democratic republic",
     question: "How did a People's War end in a constituent assembly rather than revolution?",
-    status: "coming-soon",
+    status: "live",
     dev: false, dem: true, conflict: true,
   },
   {

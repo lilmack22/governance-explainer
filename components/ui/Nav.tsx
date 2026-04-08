@@ -8,6 +8,7 @@ import { Globe } from "lucide-react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/cases", label: "Case Explorer" },
+  { href: "/theory", label: "Theory Explorer" },
 ];
 
 export default function Nav() {
